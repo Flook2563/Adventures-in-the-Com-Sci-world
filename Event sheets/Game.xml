@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game</name>
+    <events>
+        <event-block sid="795448825134916">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="307084270402677" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="958678888675066" type="Audio" />
+            </actions>
+        </event-block>
+        <event-block sid="487698823605016">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="923927149964898" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="577559582411738" type="listgame">
+                    <param id="0" name="Unique ID">104</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="204572622030262" type="System">
+                    <param id="0" name="Layout">Type the Alphabet</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="851343936540892">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="689558464032945" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="716167636096601" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="804566606545734">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="183043422179072" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="180232366522072" type="listgame">
+                    <param id="0" name="Unique ID">105</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="804260662670729" type="System">
+                    <param id="0" name="Layout">shoot game</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="910149568076300">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="416487067352340" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="627224983438819" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="313065712776787">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="417996234736717" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="457454124078178" type="listgame">
+                    <param id="0" name="Unique ID">106</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="195135967426226" type="System">
+                    <param id="0" name="Layout">LV1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="435242506506449">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="245088758304208" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="465961562140474" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="868700481786231">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="704624551773878" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="551996466944156" type="listgame">
+                    <param id="0" name="Unique ID">802</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="222090731236494" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="371284867525653">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="263063313625171" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="239259112715939" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Overview</name>
+    <events>
+        <variable constant="0" name="sum_pic" sid="215576836845543" static="0" type="number">0</variable>
+        <variable constant="0" name="score_adx" sid="275652376150777" static="0" type="number">0</variable>
+        <variable constant="0" name="frame_adx" sid="566943785528284" static="0" type="number">0</variable>
+        <variable constant="0" name="score_shoot" sid="261807914978070" static="0" type="number">0</variable>
+        <variable constant="0" name="frame_shoot" sid="698114151321611" static="0" type="number">0</variable>
+        <variable constant="0" name="score_type" sid="738384904016094" static="0" type="number">0</variable>
+        <variable constant="0" name="frame_display" sid="229111927973543" static="0" type="number">0</variable>
+        <event-block sid="260487808730813">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="877879851815253" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="783529773292804" type="listgame">
+                    <param id="0" name="Unique ID">821</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="227291234800086" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="282441908959072">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="364048749141474" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="559596259689061" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="786677892024163">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="219980064002362" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="750861724873810" type="txt_over_name">
+                    <param id="0" name="Text">display_name</param>
+                </action>
+                <action id="0" name="Set text" sid="599357690632786" type="txt_over_mail">
+                    <param id="0" name="Text">email</param>
+                </action>
+                <action id="22" name="Get score" sid="371406894168819" type="Adventures">
+                    <param id="0" name="UserID">display_name</param>
+                </action>
+                <action id="22" name="Get score" sid="859083396733050" type="shootgame">
+                    <param id="0" name="UserID">display_name</param>
+                </action>
+                <action id="22" name="Get score" sid="370078004019713" type="TypeGame">
+                    <param id="0" name="UserID">display_name</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="288599052766364" title="แปลงเลข">
+            <sub-events>
+                <event-block sid="812300711645744">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="658302531727446" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="202351029938896" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="920252239558770">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="471471137926557" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">101</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="391346935601816" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="253347301497178" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="944081620686528">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="721562654370690" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">201</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="619211814518412" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="438010019555762" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="504503019799228">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="534934878774393" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">301</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="315444786177799" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">400</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="466063545017066" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="148001062183606">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="469820751175542" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">401</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="397754453680493" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">500</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="928771562117335" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="210354548737087">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="165816497951232" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">501</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="996496300409967" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="378971013652936" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="501467266209514">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="201132974799427" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">601</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="247966764054978" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">700</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="628910956125621" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="945354707420008">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="818532875954162" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">701</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="266365926689009" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="615134240815194" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="584237296351699">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="710482382449604" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">801</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="711208856387342" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">900</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="666041443156156" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">9</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="487624278221481">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="708102677758508" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">901</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="745549961841368" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="821421175891213" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="798138618478209" title="แปลงเลข2">
+            <sub-events>
+                <event-block sid="342704535859035">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="858374854857427" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="469717961689844" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="475620891571272">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="481682959500121" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="218449430437801" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="753885374943644" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="645517402658232">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="127320947612329" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="583376102122436" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="469458368153601" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="499082748098615">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="811321629922677" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="337904835539413" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="470870972806575" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="277122094996387">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="807096311537917" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">16</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="914162637706961" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="966693272390287" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="769084499971938">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="879725674277634" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">21</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="305558634663455" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="522416584745228" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="904750512687623">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="754864707178502" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">26</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="967760583356474" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="620297606217255" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="929222315267662">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="468951828833354" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">31</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="422029264221238" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="163169191750089" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="431429692804567">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="624861431064303" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">36</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="801651657978793" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="278157781599504" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="260427439256513">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="957497591909218" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">41</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="587908533605628" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="287888665231488" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">9</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="485691434793831">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="245149610293156" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">46</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="483690385723409" type="System">
+                            <param id="0" name="Variable">frame_adx</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="429539608757758" title="Score">
+            <sub-events>
+                <event-block sid="641560379446567">
+                    <conditions>
+                        <condition id="23" name="On get score" sid="596428684100796" type="Adventures" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="269645873749308" type="System">
+                            <param id="0" name="Variable">score_adx</param>
+                            <param id="1" name="Value">Adventures.LastScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="499552770897376">
+                    <conditions>
+                        <condition id="23" name="On get score" sid="389325491671631" type="shootgame" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="522455824661667" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Value">shootgame.LastScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="233436708666014">
+                    <conditions>
+                        <condition id="23" name="On get score" sid="870770993176003" type="TypeGame" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="257229511172114" type="System">
+                            <param id="0" name="Variable">score_type</param>
+                            <param id="1" name="Value">TypeGame.LastScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="374439103676271">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="406311275301412" type="txt_1">
+                            <param id="0" name="Text">score_adx&amp;&quot; คะแนน&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="735800797971948" type="txt_2">
+                            <param id="0" name="Text">score_shoot&amp;&quot; คะแนน&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="871126312557910" type="txt_3">
+                            <param id="0" name="Text">score_type&amp;&quot; วินาที&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="836980728423619" type="status_re">
+                            <param id="0" name="Frame number">frame_adx</param>
+                        </action>
+                        <action id="0" name="Set text" sid="513747914207564" type="txt_per1">
+                            <param id="0" name="Text">frame_adx&amp;&quot;0%&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="778425974884086" type="status_w">
+                            <param id="0" name="Frame number">frame_shoot</param>
+                        </action>
+                        <action id="0" name="Set text" sid="766734312806052" type="txt_per2">
+                            <param id="0" name="Text">frame_shoot&amp;&quot;0%&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="727691762383915" title="Level">
+            <sub-events>
+                <event-block sid="703286704754183">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="249291521021540" type="System">
+                            <param id="0" name="Variable">sum_pic</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="462223094835791" type="System">
+                            <param id="0" name="Variable">sum_pic</param>
+                            <param id="1" name="Value">score_adx</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="974172415123545" type="System">
+                            <param id="0" name="Variable">sum_pic</param>
+                            <param id="1" name="Value">frame_shoot</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="923549589015208">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="758040313713494" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="773832399781356" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="648483529486467" type="txt_over_lv">
+                                    <param id="0" name="Text">&quot;Noob&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="974650683004698" type="System">
+                                    <param id="0" name="Variable">frame_display</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="362795803300082" type="show_display">
+                                    <param id="0" name="Frame number">frame_display</param>
+                                </action>
+                                <action id="0" name="Set text" sid="113765153455345" type="txt_over_name">
+                                    <param id="0" name="Text">display_name</param>
+                                </action>
+                                <action id="0" name="Set text" sid="608475568607567" type="txt_over_mail">
+                                    <param id="0" name="Text">email</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="836660920294441">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="500915551383024" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="315372409850204" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="284028746749522" type="txt_over_lv">
+                                    <param id="0" name="Text">&quot;Beginner&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="889174936023863" type="System">
+                                    <param id="0" name="Variable">frame_display</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="127999614181338" type="show_display">
+                                    <param id="0" name="Frame number">frame_display</param>
+                                </action>
+                                <action id="0" name="Set text" sid="752374410094212" type="txt_over_name">
+                                    <param id="0" name="Text">display_name</param>
+                                </action>
+                                <action id="0" name="Set text" sid="924727890513160" type="txt_over_mail">
+                                    <param id="0" name="Text">email</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="584910864315301">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="515406074123159" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="908322102258459" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="327549022089490" type="txt_over_lv">
+                                    <param id="0" name="Text">&quot;Normal&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="122250777596382" type="System">
+                                    <param id="0" name="Variable">frame_display</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="802447244854844" type="show_display">
+                                    <param id="0" name="Frame number">frame_display</param>
+                                </action>
+                                <action id="0" name="Set text" sid="485938572836897" type="txt_over_name">
+                                    <param id="0" name="Text">display_name</param>
+                                </action>
+                                <action id="0" name="Set text" sid="670282648452675" type="txt_over_mail">
+                                    <param id="0" name="Text">email</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="717637134972061">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="987170950476451" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">13</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="894778252354311" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="965038308674466" type="txt_over_lv">
+                                    <param id="0" name="Text">&quot;Professional&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="336931265804060" type="System">
+                                    <param id="0" name="Variable">frame_display</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="469354792919354" type="show_display">
+                                    <param id="0" name="Frame number">frame_display</param>
+                                </action>
+                                <action id="0" name="Set text" sid="371397354081439" type="txt_over_name">
+                                    <param id="0" name="Text">display_name</param>
+                                </action>
+                                <action id="0" name="Set text" sid="202720694627545" type="txt_over_mail">
+                                    <param id="0" name="Text">email</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855167365852351">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="996194943097106" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">17</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="188361686431533" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">19</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="420198697710150" type="txt_over_lv">
+                                    <param id="0" name="Text">&quot;Hacker&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="785660378238206" type="System">
+                                    <param id="0" name="Variable">frame_display</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="172499341145903" type="show_display">
+                                    <param id="0" name="Frame number">frame_display</param>
+                                </action>
+                                <action id="0" name="Set text" sid="246421473013662" type="txt_over_name">
+                                    <param id="0" name="Text">display_name</param>
+                                </action>
+                                <action id="0" name="Set text" sid="181151954275734" type="txt_over_mail">
+                                    <param id="0" name="Text">email</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="159205667272535">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="916043766213584" type="System">
+                                    <param id="0" name="Variable">sum_pic</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="249271897403905" type="txt_over_lv">
+                                    <param id="0" name="Text">&quot;GOD&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="649775623401832" type="System">
+                                    <param id="0" name="Variable">frame_display</param>
+                                    <param id="1" name="Value">6</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="770071206986664" type="show_display">
+                                    <param id="0" name="Frame number">frame_display</param>
+                                </action>
+                                <action id="0" name="Set text" sid="549307454734033" type="txt_over_name">
+                                    <param id="0" name="Text">display_name</param>
+                                </action>
+                                <action id="0" name="Set text" sid="520977490268310" type="txt_over_mail">
+                                    <param id="0" name="Text">email</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

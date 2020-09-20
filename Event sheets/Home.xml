@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Home</name>
+    <events>
+        <event-block sid="349670627111449">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="948664968980496" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="971526511828859" type="System">
+                    <param id="0" name="Variable">count_door</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="764994286581953" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="392024643771042" type="System">
+                    <param id="0" name="Variable">score_intro</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="206792523296146" type="System">
+                    <param id="0" name="Variable">score_network</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="508053507351154">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="318123455581809" type="System">
+                            <param id="0" name="Variable">monster1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="785920736291058" type="System">
+                            <param id="0" name="Variable">monster2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="412705773511705" type="System">
+                            <param id="0" name="Variable">monster3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="253346954065723" type="System">
+                            <param id="0" name="Variable">monsterLV21</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="509726878506361" type="System">
+                            <param id="0" name="Variable">monsterLV22</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="744392911856167" type="System">
+                            <param id="0" name="Variable">monsterLV23</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="643843299661623" type="System">
+                            <param id="0" name="Variable">monsterLV24</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="123403294324251" type="System">
+                            <param id="0" name="Variable">monsterLV25</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="338851040437801" type="System">
+                            <param id="0" name="Variable">monsterLV31</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="468278305087501" type="System">
+                            <param id="0" name="Variable">monsterLV32</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="988051677998738" type="System">
+                            <param id="0" name="Variable">monsterLV33</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="297268700527883" type="System">
+                            <param id="0" name="Variable">monsterLV34</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="803801002249404" type="System">
+                            <param id="0" name="Variable">monsterLV35</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="442519943377218" type="System">
+                            <param id="0" name="Variable">monsterLV41</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="859987904124971" type="System">
+                            <param id="0" name="Variable">monsterLV42</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="730439916889970" type="System">
+                            <param id="0" name="Variable">monsterLV43</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="807017625427583" type="System">
+                            <param id="0" name="Variable">monsterLV44</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="930552642373231" type="System">
+                            <param id="0" name="Variable">monsterLV51</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="799521005709227" type="System">
+                            <param id="0" name="Variable">monsterLV52</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="642280267943658" type="System">
+                            <param id="0" name="Variable">StartX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="944228359992608" type="System">
+                            <param id="0" name="Variable">StartX2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="981168382944254" type="System">
+                            <param id="0" name="Variable">StartX3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="351602258564430" type="System">
+                            <param id="0" name="Variable">StartX4</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="481758607105254" type="System">
+                            <param id="0" name="Variable">StartX5</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="373203825546981" type="System">
+                            <param id="0" name="Variable">StartY</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="966575576352983" type="System">
+                            <param id="0" name="Variable">StartY2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="205300594486170" type="System">
+                            <param id="0" name="Variable">StartY3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="145193642410422" type="System">
+                            <param id="0" name="Variable">StartY4</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="443728313080258" type="System">
+                            <param id="0" name="Variable">StartY5</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="541960055932865" type="System">
+                            <param id="0" name="Variable">laser1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="825435414576722" type="System">
+                            <param id="0" name="Variable">laser2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="372683363187792" type="System">
+                            <param id="0" name="Variable">laser3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="666408906801661" type="System">
+                            <param id="0" name="Variable">LV</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="333486009304910">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="730746073354586" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_game</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="108199651281802" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="301263658347634">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="909807710726633" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="579603562669637" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="509445531557414">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="164683705324670" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_lead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="203580772621311" type="System">
+                    <param id="0" name="Layout">Leaderboard</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="830910127685811">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="961140483616773" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="928020675545092" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="519244683812057">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="556149775226531" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_overview</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="850688883651499" type="System">
+                    <param id="0" name="Layout">Overview</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="767985302363158">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="149105199521452" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="809299434456749" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="595069979167132">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="556064705102732" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_setting</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="148026767511131" type="System">
+                    <param id="0" name="Layout">Setting</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="156926175254995">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="783974345190378" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="341669013558345" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="125260601426263">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="787855136156039" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_exit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="943585123665300" type="System" />
+                <action id="-2" name="Go to layout" sid="537666633105715" type="System">
+                    <param id="0" name="Layout">Login</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="215948972617438">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="984853067257598" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="226119478848969" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

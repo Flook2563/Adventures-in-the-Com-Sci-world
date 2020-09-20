@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Register</name>
+    <events>
+        <variable constant="0" name="check" sid="875031398346523" static="0" type="text">True</variable>
+        <variable constant="0" name="reg_name" sid="732994844177393" static="0" type="text"></variable>
+        <variable constant="0" name="reg_email" sid="660315311410398" static="0" type="text"></variable>
+        <variable constant="0" name="username" sid="184341919303680" static="0" type="text"></variable>
+        <variable constant="0" name="password" sid="166035056840287" static="0" type="text"></variable>
+        <variable constant="0" name="co_password" sid="830330880114652" static="0" type="text"></variable>
+        <event-block sid="239394106545840">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="492057389480853" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="842746516470858" type="reg_display">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="62" name="Go online" sid="324272865977789" type="Firebase" />
+            </actions>
+        </event-block>
+        <event-block sid="727659194794002">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="460884457659698" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_reg_submit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="284547344968662" type="System">
+                    <param id="0" name="Variable">check</param>
+                    <param id="1" name="Value">&quot;True&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="267102369156023" type="Function">
+                    <param id="0" name="Name">&quot;check_pass&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="726147989524031">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="682244736716298" type="System">
+                            <param id="0" name="Variable">check</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;True&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="486282144473164" type="Function">
+                            <param id="0" name="Name">&quot;AddData&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="160294192813545" type="reg_display">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="308199526324780" type="System">
+                            <param id="0" name="Layout">Login</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="169705371752985">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="491810831135313" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="134501227814160" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="989303232136004">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="724622117598238" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_reg_back</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="867215038012812" type="System">
+                    <param id="0" name="Layout">Login</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="676247330898000">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="175861841486700" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="914675537071748" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="520845982068666">
+            <conditions>
+                <condition id="0" name="On function" sid="300762646004478" type="Function">
+                    <param id="0" name="Name">&quot;check_pass&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="788268209669006" type="System">
+                    <param id="0" name="Variable">reg_name</param>
+                    <param id="1" name="Value">str(txt_reg_name.Text)</param>
+                </action>
+                <action id="-9" name="Set value" sid="227977203501869" type="System">
+                    <param id="0" name="Variable">username</param>
+                    <param id="1" name="Value">str(txt_reg_username.Text)</param>
+                </action>
+                <action id="-9" name="Set value" sid="280160523209791" type="System">
+                    <param id="0" name="Variable">password</param>
+                    <param id="1" name="Value">str(txt_reg_password.Text)</param>
+                </action>
+                <action id="-9" name="Set value" sid="930533813257712" type="System">
+                    <param id="0" name="Variable">co_password</param>
+                    <param id="1" name="Value">str(txt_reg_password2.Text)</param>
+                </action>
+                <action id="-9" name="Set value" sid="760989484741841" type="System">
+                    <param id="0" name="Variable">reg_email</param>
+                    <param id="1" name="Value">str(txt_reg_email.Text)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1" sid="341583303436738">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="548674594052053" type="System">
+                            <param id="0" name="Variable">reg_name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="345502408362971" type="System">
+                            <param id="0" name="Variable">username</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="748880919640718" type="System">
+                            <param id="0" name="Variable">password</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="981340280935806" type="System">
+                            <param id="0" name="Variable">co_password</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="190762028085759" type="System">
+                            <param id="0" name="Variable">reg_email</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="428876155074649" type="reg_display">
+                            <param id="0" name="Text">&quot;Please fill in the free space.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="552928254178977" type="System">
+                            <param id="0" name="Variable">check</param>
+                            <param id="1" name="Value">&quot;False&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="836474792370034">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="946470654535653" type="System">
+                            <param id="0" name="Variable">password</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">co_password</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="568003352682828" type="reg_display">
+                            <param id="0" name="Text">&quot;Passwords with CO-passwords do not match.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="341904867955479" type="System">
+                            <param id="0" name="Variable">check</param>
+                            <param id="1" name="Value">&quot;False&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="649374041699051">
+            <conditions>
+                <condition id="0" name="On function" sid="375251316763657" type="Function">
+                    <param id="0" name="Name">&quot;AddData&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set at X" sid="118646864107352" type="Array_reg">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">str(txt_reg_name.Text)</param>
+                </action>
+                <action id="2" name="Set at X" sid="448902070247638" type="Array_reg">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">str(txt_reg_username.Text)</param>
+                </action>
+                <action id="2" name="Set at X" sid="427242740850330" type="Array_reg">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Value">str(txt_reg_password.Text)</param>
+                </action>
+                <action id="2" name="Set at X" sid="450716832581782" type="Array_reg">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Value">str(txt_reg_password2.Text)</param>
+                </action>
+                <action id="2" name="Set at X" sid="784232622721650" type="Array_reg">
+                    <param id="0" name="X">4</param>
+                    <param id="1" name="Value">str(txt_reg_email.Text)</param>
+                </action>
+                <action id="1" name="Set value" sid="590491138964072" type="Register">
+                    <param id="0" name="Key">&quot;name&quot;</param>
+                    <param id="1" name="Value">Array_reg.At(0)</param>
+                </action>
+                <action id="1" name="Set value" sid="116656258648399" type="Register">
+                    <param id="0" name="Key">&quot;username&quot;</param>
+                    <param id="1" name="Value">Array_reg.At(1)</param>
+                </action>
+                <action id="1" name="Set value" sid="627042535817973" type="Register">
+                    <param id="0" name="Key">&quot;password&quot;</param>
+                    <param id="1" name="Value">Array_reg.At(2)</param>
+                </action>
+                <action id="1" name="Set value" sid="361809556790083" type="Register">
+                    <param id="0" name="Key">&quot;copassword&quot;</param>
+                    <param id="1" name="Value">Array_reg.At(3)</param>
+                </action>
+                <action id="1" name="Set value" sid="654169694369892" type="Register">
+                    <param id="0" name="Key">&quot;email&quot;</param>
+                    <param id="1" name="Value">Array_reg.At(4)</param>
+                </action>
+                <action id="4" name="Save" sid="270090413095939" type="Register">
+                    <param id="0" name="ID">Array_reg.At(1)</param>
+                    <param id="1" name="Set mode">0</param>
+                    <param id="2" name="Tag">&quot;savedata&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="641618745829510">
+            <conditions>
+                <condition id="1" name="On save complete" sid="763662713767298" type="Register">
+                    <param id="0" name="Tag">&quot;savedata&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="838916703757943" type="txt_reg_name">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="555252863207589" type="txt_reg_username">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="657010100200441" type="txt_reg_password">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="963152725180852" type="txt_reg_password2">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="999445082009669" type="txt_reg_email">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Clear" sid="263658442181719" type="Array_reg" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

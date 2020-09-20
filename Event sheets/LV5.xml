@@ -1,0 +1,1039 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LV5</name>
+    <events>
+        <include>LV1</include>
+        <variable constant="0" name="monsterLV51" sid="417404053082284" static="0" type="number">0</variable>
+        <variable constant="0" name="monsterLV52" sid="342252602036301" static="0" type="number">0</variable>
+        <variable constant="0" name="StartY5" sid="783130214928653" static="0" type="number">0</variable>
+        <variable constant="0" name="StartX5" sid="406373374384637" static="0" type="number">0</variable>
+        <variable constant="0" name="laser3" sid="783848903884200" static="0" type="number">0</variable>
+        <event-block sid="284379403985790">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="952473024982479" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="649464136161130" type="System">
+                    <param id="0" name="Variable">Random_minigame</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="553697581919410" type="System">
+                    <param id="0" name="Variable">StartX</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="680132752793376" type="System">
+                    <param id="0" name="Variable">StartY</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="597762172108570" type="System">
+                    <param id="0" name="Variable">StartX2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="137520096431557" type="System">
+                    <param id="0" name="Variable">StartY2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="170459114749637" type="System">
+                    <param id="0" name="Variable">StartX3</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="240198497250805" type="System">
+                    <param id="0" name="Variable">StartY3</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="301245058959838" type="System">
+                    <param id="0" name="Variable">StartX4</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="520482120653180" type="System">
+                    <param id="0" name="Variable">StartY4</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="120170633197968" type="System">
+                    <param id="0" name="Variable">LV</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="513473766017839" title="MonsterMovement LV.5">
+            <sub-events>
+                <event-group description="" sid="149465555778937" title="Mon-5.1">
+                    <sub-events>
+                        <event-block sid="113059941954113">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="952182738843998" type="miniboss1">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="224506193423883" type="miniboss1">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="653955811442076" type="miniboss1">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="134906331731580">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="221519675063560" type="miniboss1">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="515433680789324" type="miniboss1">
+                                    <param id="0" name="Animation">&quot;run&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="555941163586456" type="miniboss1">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="643121857894471" type="miniboss1">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="877379939125098">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="240550274466398" type="miniboss1">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="576497030551909" type="miniboss1">
+                                    <param id="0" name="Animation">&quot;run&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="858920319240234" type="miniboss1">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="666918571145855" type="miniboss1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="927066715969737">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="658400215584275" type="miniboss1">
+                                    <param id="0" name="Object">border_L</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="926789283025651" type="miniboss1">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="582805523436164">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="278652316130099" type="miniboss1">
+                                    <param id="0" name="Object">border_R</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="462102285863470" type="miniboss1">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="761596856793509" title="Mon-5.2">
+                    <sub-events>
+                        <event-block sid="657567775255745">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="254065140465459" type="miniboss2">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="674582997693285" type="miniboss2">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="173870398331389" type="miniboss2">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="297392138209504">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="233076532234230" type="miniboss2">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="702377057967718" type="miniboss2">
+                                    <param id="0" name="Animation">&quot;run&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="748946679980542" type="miniboss2">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="995453617151424" type="miniboss2">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="467504417561364">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="671689451540750" type="miniboss2">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="889970910352267" type="miniboss2">
+                                    <param id="0" name="Animation">&quot;run&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="202761246331080" type="miniboss2">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="955399460563992" type="miniboss2">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="981449710388156">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="858286921716116" type="miniboss2">
+                                    <param id="0" name="Object">border_L</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="171965621583999" type="miniboss2">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="554048625914356">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="783824176294796" type="miniboss2">
+                                    <param id="0" name="Object">border_R</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="781672934245473" type="miniboss2">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="203988372074169" title="Mon-5.3">
+                    <sub-events>
+                        <event-block sid="796604362051527">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="769124133696046" type="boss">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="845693035939983" type="boss">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="706388223769568" type="boss">
+                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="971142684717042">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="362778048470878" type="boss">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="512280353432712" type="boss">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="260788742920037" type="boss">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="400997701448791" type="boss">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="480599561615626">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="883731652481036" type="boss">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="985842816996898" type="boss">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="568850040612706" type="boss">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="428423537414221" type="boss">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="471416409387619">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="539859814686106" type="boss">
+                                    <param id="0" name="Object">border_L</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="278315622423653" type="border_L">
+                                    <param id="0" name="Unique ID">343</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="912502918148992" type="boss">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="596040376187458">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="139513255970431" type="boss">
+                                    <param id="0" name="Object">border_R</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="882482692250604" type="border_R">
+                                    <param id="0" name="Unique ID">341</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="320526737448547" type="boss">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="163596088108718" title="AttackMonsterLV.5">
+            <sub-events>
+                <event-group description="" sid="442959693441704" title="ATK_miniboss1">
+                    <sub-events>
+                        <event-block sid="878892170784933">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="951336249005324" type="arrow">
+                                    <param id="0" name="Object">miniboss1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="769842135863912" type="miniboss1">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="140987539314998" type="miniboss1">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="925117701591696">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="410862602211972" type="player">
+                                    <param id="0" name="Object">miniboss1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="887759805236886" type="Audio">
+                                    <param id="0" name="Audio file">blood_impact</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-20</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="244394650306668" type="player">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="449277323617138" type="player">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="871324755589104" type="count_hp">
+                                    <param id="0" name="Text">player.HP</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="428595861218950">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="851524807840526" type="miniboss1">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="942169736080598" type="miniboss1" />
+                                <action id="0" name="Play" sid="727040634682103" type="Audio">
+                                    <param id="0" name="Audio file">explosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-20</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="983418269088821" type="System">
+                                    <param id="0" name="Variable">count_door</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="969970707668898" type="count_door">
+                                    <param id="0" name="Text">count_door</param>
+                                </action>
+                                <action id="0" name="Call function" sid="990227733132230" type="Function">
+                                    <param id="0" name="Name">&quot;teleportlv51&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="416446415145520" type="System">
+                                    <param id="0" name="Variable">monsterLV51</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="536458314200180" type="arrow" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="278993410436512" title="ATK_miniboss2">
+                    <sub-events>
+                        <event-block sid="515741614547938">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="825098254725688" type="arrow">
+                                    <param id="0" name="Object">miniboss2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="755022426569586" type="miniboss2">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="250154429435451" type="miniboss2">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="786421445855171">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="889114191565036" type="player">
+                                    <param id="0" name="Object">miniboss2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="199576808230408" type="Audio">
+                                    <param id="0" name="Audio file">blood_impact</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-20</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="202528334500984" type="player">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="191593265564533" type="player">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="833290320593126" type="count_hp">
+                                    <param id="0" name="Text">player.HP</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="743361398628440">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="906033409886786" type="miniboss2">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="221361237879617" type="miniboss2" />
+                                <action id="0" name="Play" sid="836398249467815" type="Audio">
+                                    <param id="0" name="Audio file">explosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-20</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="925850011558038" type="System">
+                                    <param id="0" name="Variable">count_door</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="260491212429270" type="count_door">
+                                    <param id="0" name="Text">count_door</param>
+                                </action>
+                                <action id="0" name="Call function" sid="208371607976340" type="Function">
+                                    <param id="0" name="Name">&quot;teleportlv52&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="901503056491474" type="System">
+                                    <param id="0" name="Variable">monsterLV52</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="823890808574851" type="arrow" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="502785034456385" title="ATK_boss">
+                    <sub-events>
+                        <event-block sid="247913985599195">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="214401940585337" type="arrow">
+                                    <param id="0" name="Object">boss</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="299220081321202" type="boss">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="930342209733475" type="boss">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="775919898119989">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="824322173882840" type="player">
+                                    <param id="0" name="Object">boss</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="394609450004882" type="Audio">
+                                    <param id="0" name="Audio file">blood_impact</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-20</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="782642084642934" type="player">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="581066113386214" type="player">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="173802567250332" type="count_hp">
+                                    <param id="0" name="Text">player.HP</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="822782613698680">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="979042379849031" type="boss">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="699650587168554" type="display_hp">
+                                    <param id="0" name="Frame number">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="308685240042110">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="824973530386509" type="boss">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="604616307934817" type="display_hp">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="598680222175350">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="118123597914019" type="boss">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="998511992469356" type="display_hp">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="948192535506343">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="677721927965405" type="boss">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="517999624096854" type="display_hp">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="166112127709759" type="boss" />
+                                <action id="0" name="Play" sid="211642400021496" type="Audio">
+                                    <param id="0" name="Audio file">explosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-20</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="455136255655947" type="arrow" />
+                                <action id="-2" name="Go to layout" sid="555945752332317" type="System">
+                                    <param id="0" name="Layout">Game</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="458723204123128" title="MonsterATK">
+            <sub-events>
+                <event-group description="" sid="605257683993687" title="Monster1">
+                    <sub-events>
+                        <event-block sid="618351823713859">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="761925766827015" type="miniboss1">
+                                    <param id="0" name="Object">player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="451213019336812" type="miniboss1">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="142368702128996" type="miniboss1">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="293592083335232">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="548137750927307" type="player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">miniboss1.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="124257835769021" type="miniboss1">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="952512853207977">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="589437489759556" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="226002331409921" type="miniboss1">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="724175852555720">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="148760985058472" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="484542531009618">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="210592435105173" type="miniboss1">
+                                            <param id="0" name="Animation">&quot;attack&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="306259204934634" type="miniboss1">
+                                            <param id="0" name="Instance variable">stage</param>
+                                            <param id="1" name="Value">choose(1,2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="627999663475224" title="Monster2">
+                    <sub-events>
+                        <event-block sid="140924636435161">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="593399839255332" type="miniboss2">
+                                    <param id="0" name="Object">player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="358834524452364" type="miniboss2">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="855815720484951" type="miniboss2">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="953028271215862">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="787894302073368" type="player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">miniboss2.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="721650213560515" type="miniboss2">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="730421893077799">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="267468699877207" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="797640299864984" type="miniboss2">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="592804543661862">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="754273861261413" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="272987025244628">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="160964006021500" type="miniboss2">
+                                            <param id="0" name="Animation">&quot;attack&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="337293388980061" type="miniboss2">
+                                            <param id="0" name="Instance variable">stage</param>
+                                            <param id="1" name="Value">choose(1,2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="733577333504693" title="Monster3">
+                    <sub-events>
+                        <event-block sid="521566982356849">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="941846226910908" type="boss">
+                                    <param id="0" name="Object">player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="843463102649296" type="boss">
+                                    <param id="0" name="Instance variable">stage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="930974052182376" type="boss">
+                                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="559284000297151">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="406203396665014" type="player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">boss.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="434787960250221" type="boss">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="790797155989277">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="855764940702207" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="848779306416495" type="boss">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="367729248853984">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="249797536280755" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="905518753757984">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="590963772665355" type="boss">
+                                            <param id="0" name="Animation">&quot;attack&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="164517326181367" type="boss">
+                                            <param id="0" name="Instance variable">stage</param>
+                                            <param id="1" name="Value">choose(1,2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="805869617454117" title="Fuction LV5">
+            <sub-events>
+                <event-block sid="714372355898607">
+                    <conditions>
+                        <condition id="0" name="On function" sid="654025548541737" type="Function">
+                            <param id="0" name="Name">&quot;teleportlv51&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="195159734564830" type="System">
+                            <param id="0" name="Variable">Random_minigame</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="728350212768852" type="System">
+                            <param id="0" name="Variable">Random_minigame</param>
+                            <param id="1" name="Value">int(random(1,3))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="537100727636203" type="System">
+                            <param id="0" name="Variable">StartX5</param>
+                            <param id="1" name="Value">player.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="495260514183634" type="System">
+                            <param id="0" name="Variable">StartY5</param>
+                            <param id="1" name="Value">player.Y</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="459513953653452" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="362115254213984">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="592006411459927" type="System">
+                                    <param id="0" name="Variable">Random_minigame</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="424544614923498" type="System">
+                                    <param id="0" name="Layout">Minigame LV5 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="829701796744583">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="676288570445041" type="System">
+                                    <param id="0" name="Variable">Random_minigame</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="247439163266733" type="System">
+                                    <param id="0" name="Layout">Minigame LV5 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="344128206693184">
+                    <conditions>
+                        <condition id="0" name="On function" sid="152179186767978" type="Function">
+                            <param id="0" name="Name">&quot;teleportlv52&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="355765055117204" type="System">
+                            <param id="0" name="Variable">Random_minigame</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="228000685882622" type="System">
+                            <param id="0" name="Variable">Random_minigame</param>
+                            <param id="1" name="Value">int(random(1,3))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="142400453159836" type="System">
+                            <param id="0" name="Variable">StartX5</param>
+                            <param id="1" name="Value">player.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="509788062906738" type="System">
+                            <param id="0" name="Variable">StartY5</param>
+                            <param id="1" name="Value">player.Y</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="272504752709712" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="583214292394255">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="124001149870243" type="System">
+                                    <param id="0" name="Variable">Random_minigame</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="163928567461155" type="System">
+                                    <param id="0" name="Layout">Minigame LV5 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="879959691250923">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="651375862701396" type="System">
+                                    <param id="0" name="Variable">Random_minigame</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="742553754407122" type="System">
+                                    <param id="0" name="Layout">Minigame LV5 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="914893587977455" title="Destroy Monster LV.5">
+            <sub-events>
+                <event-block sid="824664990247004">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="522864933915841" type="System">
+                            <param id="0" name="Variable">monsterLV51</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="530516011614336" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="710565314725026" type="miniboss1" />
+                        <action id="-3" name="Set position" sid="291228340815099" type="player">
+                            <param id="0" name="X">StartX5</param>
+                            <param id="1" name="Y">StartY5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="351771811909405">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="213343725918249" type="System">
+                                    <param id="0" name="Variable">monsterLV52</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="745547377870492" type="miniboss2" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="866924119561561">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="253775781905811" type="System">
+                            <param id="0" name="Variable">monsterLV52</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="534490260383764" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="959202249064752" type="miniboss2" />
+                        <action id="-3" name="Set position" sid="961771573425593" type="player">
+                            <param id="0" name="X">StartX5</param>
+                            <param id="1" name="Y">StartY5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="171861426903762">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="978403598942589" type="System">
+                                    <param id="0" name="Variable">monsterLV51</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="918761833854018" type="miniboss1" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="220332513324264" title="Destroy Wall2">
+            <sub-events>
+                <event-block sid="576228072404903">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="426070525441771" type="System">
+                            <param id="0" name="Variable">count_door</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="726060150651297" type="wall_laser2" />
+                        <action id="-15" name="Set visible" sid="915447334656312" type="display_boss">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="883291366338191" type="display_hp">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

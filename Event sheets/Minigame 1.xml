@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Minigame 1</name>
+    <events>
+        <variable constant="0" name="Load_subject" sid="277998293725880" static="0" type="text"></variable>
+        <variable constant="0" name="score_intro" sid="424175372469970" static="0" type="number">0</variable>
+        <variable constant="0" name="score_network" sid="706312723394473" static="0" type="number">0</variable>
+        <variable constant="0" name="select_sub" sid="459840114036756" static="0" type="text">introtocs</variable>
+        <variable constant="0" name="count_intro" sid="378146019472649" static="0" type="text"></variable>
+        <variable constant="0" name="count_network" sid="829171290850969" static="0" type="text"></variable>
+        <variable constant="0" name="count_ans" sid="651983909589275" static="0" type="number">0</variable>
+        <variable constant="0" name="GetTimeZombie" sid="597234307442139" static="0" type="number">0</variable>
+        <variable constant="0" name="zoombie_time" sid="575331084732500" static="0" type="number">0</variable>
+        <variable constant="0" name="Number" sid="230838129913778" static="0" type="text"></variable>
+        <variable constant="0" name="randomCol" sid="172372506786712" static="0" type="number">0</variable>
+        <variable constant="0" name="minigame_answer" sid="517666925120887" static="0" type="text"></variable>
+        <variable constant="0" name="Number_check" sid="911346022127087" static="0" type="number">0</variable>
+        <variable constant="0" name="Number_random" sid="153144968376527" static="0" type="number">0</variable>
+        <event-block sid="845780695208632">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="199035022859176" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set CSS style" sid="400325613543775" type="minigame1_input">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;red&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="645575582995214" type="minigame1_input">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;22px&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="810562092519802" type="minigame1_input">
+                    <param id="0" name="Property name">&quot;text-align&quot;</param>
+                    <param id="1" name="Value">&quot;center&quot;</param>
+                </action>
+                <action id="6" name="Set focused" sid="588976230743992" type="minigame1_input" />
+                <action id="62" name="Go online" sid="929940367215309" type="Firebase" />
+                <action id="-9" name="Set value" sid="626360867610019" type="System">
+                    <param id="0" name="Variable">select_sub</param>
+                    <param id="1" name="Value">Select_s</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="593577324640729">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="833161407616928" type="System">
+                            <param id="0" name="Variable">select_sub</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;introtocs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="13" name="Load all" sid="853417687178531" type="IntoToCS">
+                            <param id="0" name="Tag">&quot;dataUse&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="981665480946782">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="280546079512612" type="System">
+                            <param id="0" name="Variable">select_sub</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;network&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="13" name="Load all" sid="557411159306599" type="Network">
+                            <param id="0" name="Tag">&quot;dataUse&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="999482379230277" title="LoadQuestion">
+            <sub-events>
+                <event-block sid="958076965782092">
+                    <conditions>
+                        <condition id="0" name="On function" sid="594785804086260" type="Function">
+                            <param id="0" name="Name">&quot;Random&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="253321506789237" type="System">
+                            <param id="0" name="Variable">count_intro</param>
+                            <param id="1" name="Value">IntoToCS.ItemsCount</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="634344215114089" type="System">
+                            <param id="0" name="Variable">count_network</param>
+                            <param id="1" name="Value">Network.ItemsCount</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="620194975935408" type="System">
+                            <param id="0" name="Variable">Number_check</param>
+                            <param id="1" name="Value">count_intro+count_network</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="501572919235428" type="System">
+                            <param id="0" name="Variable">Number_random</param>
+                            <param id="1" name="Value">int(random(1,Number_check))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="291075009450640">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="514863097165841" type="System">
+                                    <param id="0" name="Variable">select_sub</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;introtocs&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="170493403143914" type="System">
+                                    <param id="0" name="Variable">randomCol</param>
+                                    <param id="1" name="Value">int(random(1,count_intro))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="234078620029660" type="System">
+                                    <param id="0" name="Variable">Number</param>
+                                    <param id="1" name="Value">&quot;NO&quot;&amp;randomCol</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="535121641460588">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="445572213917602" type="System">
+                                            <param id="0" name="Variable">Number</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;NO0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="545809916234729" type="System">
+                                            <param id="0" name="Variable">Number</param>
+                                            <param id="1" name="Value">&quot;NO&quot;&amp;int(random(1,Number_check))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="812068417253148">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="324934246028381" type="System">
+                                    <param id="0" name="Variable">select_sub</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;network&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="416148337009119" type="System">
+                                    <param id="0" name="Variable">randomCol</param>
+                                    <param id="1" name="Value">int(random(1,count_network))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="544588063385069" type="System">
+                                    <param id="0" name="Variable">Number</param>
+                                    <param id="1" name="Value">&quot;NO&quot;&amp;randomCol</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="227811229203062">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="836526077975710" type="System">
+                                            <param id="0" name="Variable">Number</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;NO0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="953593874551203" type="System">
+                                            <param id="0" name="Variable">Number</param>
+                                            <param id="1" name="Value">&quot;NO&quot;&amp;int(random(1,Number_check))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="762915010091745">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="119579016999909" type="System">
+                            <param id="0" name="Variable">select_sub</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;introtocs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="334092679740146">
+                            <conditions>
+                                <condition id="11" name="On load complete" sid="789539147749868" type="IntoToCS">
+                                    <param id="0" name="Tag">&quot;dataUse&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="941960688386327" type="Function">
+                                    <param id="0" name="Name">&quot;Random&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="2" name="Set at X" sid="837439402947696" type="QuizArray">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;Qu&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="741053504481802" type="QuizArray">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;C1&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="739745589749797" type="QuizArray">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;C2&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="355604094531158" type="QuizArray">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;C3&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="782914078717047" type="QuizArray">
+                                    <param id="0" name="X">4</param>
+                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;C4&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="324612169664390" type="QuizArray">
+                                    <param id="0" name="X">5</param>
+                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;ans&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="262095441604134" type="QuizArray">
+                                    <param id="0" name="X">6</param>
+                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;Time&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="685324702842179" type="QuizArray">
+                                    <param id="0" name="X">7</param>
+                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;subject&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="914591277349580" type="topictext">
+                                    <param id="0" name="Text">QuizArray.At(0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="800325704765954" type="c1text">
+                                    <param id="0" name="Text">QuizArray.At(1)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="908800413257814" type="c2text">
+                                    <param id="0" name="Text">QuizArray.At(2)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="746281206752764" type="c3text">
+                                    <param id="0" name="Text">QuizArray.At(3)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="997318375946135" type="c4text">
+                                    <param id="0" name="Text">QuizArray.At(4)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="707952871884614" type="System">
+                                    <param id="0" name="Variable">minigame_answer</param>
+                                    <param id="1" name="Value">QuizArray.At(5)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="520607356044626" type="System">
+                                    <param id="0" name="Variable">zoombie_time</param>
+                                    <param id="1" name="Value">QuizArray.At(6)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="738292526768585" type="System">
+                                    <param id="0" name="Variable">count_ans</param>
+                                    <param id="1" name="Value">len(minigame_answer)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="472763659619703" type="System">
+                                    <param id="0" name="Variable">Load_subject</param>
+                                    <param id="1" name="Value">QuizArray.At(7)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="252417909775311">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="933096228812623" type="System">
+                            <param id="0" name="Variable">select_sub</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;network&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="837662714669186">
+                            <conditions>
+                                <condition id="11" name="On load complete" sid="268780029284714" type="Network">
+                                    <param id="0" name="Tag">&quot;dataUse&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="886174272595551" type="Function">
+                                    <param id="0" name="Name">&quot;Random&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="2" name="Set at X" sid="610067435240574" type="QuizArray">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Value">Network.At(Number,&quot;Qu&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="803135189258842" type="QuizArray">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Value">Network.At(Number,&quot;C1&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="328642195424545" type="QuizArray">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Value">Network.At(Number,&quot;C2&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="297113947967762" type="QuizArray">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Value">Network.At(Number,&quot;C3&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="946521466774012" type="QuizArray">
+                                    <param id="0" name="X">4</param>
+                                    <param id="1" name="Value">Network.At(Number,&quot;C4&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="808880434554636" type="QuizArray">
+                                    <param id="0" name="X">5</param>
+                                    <param id="1" name="Value">Network.At(Number,&quot;ans&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="167554041664038" type="QuizArray">
+                                    <param id="0" name="X">6</param>
+                                    <param id="1" name="Value">Network.At(Number,&quot;Time&quot;)</param>
+                                </action>
+                                <action id="2" name="Set at X" sid="248632350657858" type="QuizArray">
+                                    <param id="0" name="X">7</param>
+                                    <param id="1" name="Value">Network.At(Number,&quot;subject&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="429229402004901" type="topictext">
+                                    <param id="0" name="Text">QuizArray.At(0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="747069902013304" type="c1text">
+                                    <param id="0" name="Text">QuizArray.At(1)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="206587862471214" type="c2text">
+                                    <param id="0" name="Text">QuizArray.At(2)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="462012403785936" type="c3text">
+                                    <param id="0" name="Text">QuizArray.At(3)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="107870289232303" type="c4text">
+                                    <param id="0" name="Text">QuizArray.At(4)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="633170800347766" type="System">
+                                    <param id="0" name="Variable">minigame_answer</param>
+                                    <param id="1" name="Value">QuizArray.At(5)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="489787198762651" type="System">
+                                    <param id="0" name="Variable">zoombie_time</param>
+                                    <param id="1" name="Value">QuizArray.At(6)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="785840366411558" type="System">
+                                    <param id="0" name="Variable">count_ans</param>
+                                    <param id="1" name="Value">len(minigame_answer)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="143548713067100" type="System">
+                                    <param id="0" name="Variable">Load_subject</param>
+                                    <param id="1" name="Value">QuizArray.At(7)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="356546536135140" title="zombie_time">
+            <sub-events>
+                <event-block sid="429648880342508">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="639160806860139" type="System">
+                            <param id="0" name="Variable">count_ans</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="371783867693112" type="System">
+                            <param id="0" name="Variable">GetTimeZombie</param>
+                            <param id="1" name="Value">0.6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="314128602269722">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="605859602533171" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="204879697349923" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="697175558007385" type="System">
+                            <param id="0" name="Variable">GetTimeZombie</param>
+                            <param id="1" name="Value">1.8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="623347219452980">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="371219734547424" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="995057487933692" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="376353634684966" type="System">
+                            <param id="0" name="Variable">GetTimeZombie</param>
+                            <param id="1" name="Value">1.4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="684372555171039">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="713487681719503" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="587135115127655" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="775927999944929" type="System">
+                            <param id="0" name="Variable">GetTimeZombie</param>
+                            <param id="1" name="Value">0.7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="942910250230078">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="225207142338039" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="736126272094354" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="183076464001012" type="System">
+                            <param id="0" name="Variable">GetTimeZombie</param>
+                            <param id="1" name="Value">0.6</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="626219371484834" title="ANIMATION CONTROLLER">
+            <sub-events>
+                <event-block sid="679898672103275">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="622819957795461" type="minigame1_input">
+                            <param id="0" name="Text">minigame_answer</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="257892402688284" type="minigame1_input">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="365861420327631" type="player">
+                            <param id="0" name="Animation">&quot;player_attack&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="160545514059232" type="minigame1_input">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="657895287630591">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="791800356205027" type="player">
+                            <param id="0" name="Animation">&quot;player_attack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="351177492963473" type="player">
+                            <param id="0" name="Object">arrow</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="845532339362398" type="Audio">
+                            <param id="0" name="Audio file">shoot</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="457140910055135">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="696219391119018" type="player" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="396799900302712" type="arrow">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="567575189314707">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="456496815085802" type="player" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="523376014877432" type="arrow">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="223881158678735">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="267915104799514" type="zoombie_minigame1">
+                            <param id="0" name="Animation">&quot;DIE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="871448695705691" type="zoombie_minigame1" />
+                        <action id="-16" name="Wait" sid="539303605708168" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="101912990637407" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="452437491350332" type="System">
+                            <param id="0" name="Layout">&quot;LV&quot;&amp;LV</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="561606887811335">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="217778553608544" type="System">
+                                    <param id="0" name="Variable">Load_subject</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Into to CS&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="958695227126499" type="System">
+                                    <param id="0" name="Variable">score_intro</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="120361800026082">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="540591244429881" type="System">
+                                    <param id="0" name="Variable">Load_subject</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Network&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="385932543536392" type="System">
+                                    <param id="0" name="Variable">score_network</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="204546980069063">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="139620992014251" type="zoombie_minigame1">
+                            <param id="0" name="Animation">&quot;DIE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="537643774646688">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="731499240328223" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="969877400555359" type="Audio">
+                                    <param id="0" name="Audio file">dead</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sound</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="955021378805570">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="830720217394505" type="arrow">
+                            <param id="0" name="Object">zoombie_minigame1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="657072693325563" type="zoombie_minigame1">
+                            <param id="0" name="Animation">&quot;DIE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="714479401990606">
+            <conditions>
+                <condition id="2" name="Is playing" sid="585440771519982" type="zoombie_minigame1">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="752074227278674" type="zoombie_minigame1">
+                    <param id="0" name="Object">player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="720422446722817" type="zoombie_minigame1">
+                    <param id="0" name="X">Self.X-GetTimeZombie</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="707264298795323">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="130987722476111" type="zoombie_minigame1">
+                    <param id="0" name="Object">player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="605613804211268" type="player">
+                    <param id="0" name="Animation">&quot;player_die&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="870710145877896" type="zoombie_minigame1">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="665190795639800" type="player">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="917026758969455">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="825524165911120" type="player">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Post score" sid="941048879425178" type="Adventures">
+                    <param id="0" name="UserID">display_name</param>
+                    <param id="1" name="Name">display_name</param>
+                    <param id="2" name="Score">score</param>
+                    <param id="3" name="Extra">&quot;&quot;</param>
+                    <param id="4" name="Post condition">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="399892814598677" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="0" name="Call function" sid="304984186741577" type="Function">
+                    <param id="0" name="Name">&quot;Post_intro&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="845675450798947" type="Function">
+                    <param id="0" name="Name">&quot;Post_Network&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="831517871597543" type="Function">
+                    <param id="0" name="Name">&quot;AdventuresGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="443561172961687" type="System">
+                    <param id="0" name="Variable">score_intro</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="927106006527193" type="System">
+                    <param id="0" name="Variable">score_network</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="733827710899234" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="451771652771743">
+            <conditions>
+                <condition id="0" name="On function" sid="551613809596253" type="Function">
+                    <param id="0" name="Name">&quot;AdventuresGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set at X" sid="574986137491231" type="Adventures_array">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">display_name</param>
+                </action>
+                <action id="2" name="Set at X" sid="686881440393720" type="Adventures_array">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">Load_subject</param>
+                </action>
+                <action id="2" name="Set at X" sid="651482194969386" type="Adventures_array">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Value">score_intro</param>
+                </action>
+                <action id="2" name="Set at X" sid="917130144154600" type="Adventures_array">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Value">email</param>
+                </action>
+                <action id="1" name="Set value" sid="492632394307870" type="Adventures_data">
+                    <param id="0" name="Key">&quot;Name&quot;</param>
+                    <param id="1" name="Value">display_name</param>
+                </action>
+                <action id="1" name="Set value" sid="498094414202452" type="Adventures_data">
+                    <param id="0" name="Key">&quot;Email&quot;</param>
+                    <param id="1" name="Value">Adventures_array.At(3)</param>
+                </action>
+                <action id="4" name="Save" sid="592874154028676" type="Adventures_data">
+                    <param id="0" name="ID">Load_subject&amp;&quot;/&quot;&amp;&quot;Member&quot;&amp;&quot;/&quot;&amp;display_name</param>
+                    <param id="1" name="Set mode">0</param>
+                    <param id="2" name="Tag">&quot;Adv_data&quot;</param>
+                </action>
+                <action id="1" name="Set value" sid="745235413476130" type="Adventures_table">
+                    <param id="0" name="Key">&quot;score&quot;</param>
+                    <param id="1" name="Value">score</param>
+                </action>
+                <action id="4" name="Save" sid="769236429133577" type="Adventures_table">
+                    <param id="0" name="ID">Load_subject&amp;&quot;/&quot;&amp;&quot;Member&quot;&amp;&quot;/&quot;&amp;display_name&amp;&quot;/&quot;&amp;&quot;AdventuresGame&quot;&amp;&quot;/&quot;&amp;Date.Year &amp; &quot; &quot; &amp; Date.Month &amp; &quot; &quot; &amp; Date.Date&amp; &quot; &quot; &amp;Date.Hours &amp; &quot; : &quot; &amp; Date.Minutes &amp; &quot; : &quot; &amp; Date.Seconds</param>
+                    <param id="1" name="Set mode">0</param>
+                    <param id="2" name="Tag">&quot;Adv&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="948879632896218">
+            <conditions>
+                <condition id="1" name="On save complete" sid="285341409317604" type="Adventures_table">
+                    <param id="0" name="Tag">&quot;Adv&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Clear" sid="238060857495147" type="Adventures_array" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

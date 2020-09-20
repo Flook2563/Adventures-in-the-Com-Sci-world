@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Setting</name>
+    <events>
+        <variable constant="0" name="Select_s" sid="517508309284988" static="0" type="text">introtocs</variable>
+        <variable constant="0" name="sound" sid="545203470450424" static="0" type="number">-10</variable>
+        <variable constant="0" name="sound_count" sid="176722220001333" static="0" type="number">5</variable>
+        <event-block sid="880565324126641">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="100097211371086" type="System" />
+            </conditions>
+            <actions>
+                <action id="62" name="Go online" sid="280386950199085" type="Firebase" />
+            </actions>
+            <sub-events>
+                <event-block sid="757586806982225">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="996435699746105" type="System">
+                            <param id="0" name="Variable">Select_s</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;introtocs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="721579810527967" type="status_sub">
+                            <param id="0" name="Text">&quot;Subject : Introduction to CS&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="791780701852499">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="935306657677701" type="System">
+                            <param id="0" name="Variable">Select_s</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;network&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="815477363517351" type="status_sub">
+                            <param id="0" name="Text">&quot;Subject : Network&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="654276542325899">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="195355537874812" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="883328828645015" type="listgame">
+                    <param id="0" name="Unique ID">825</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="815911214975721" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="182020119458348">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="757651739513994" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="888174757540203" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="990058001258214" title="Sound">
+            <sub-events>
+                <event-block sid="986027185711655">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="670764277159581" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">downsound</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="325292383734903" type="System">
+                            <param id="0" name="Variable">sound_count</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="773994770927376" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="553311847307568" type="status_soung">
+                            <param id="0" name="Frame number">sound_count</param>
+                        </action>
+                        <action id="0" name="Set text" sid="309410245980163" type="setting_s_status">
+                            <param id="0" name="Text">sound_count</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="589347255583390">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="126743825834183" type="System">
+                                    <param id="0" name="Variable">sound_count</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="816740219738457" type="setting_s_status">
+                                    <param id="0" name="Text">&quot;0&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="113209860620787" type="System">
+                                    <param id="0" name="Variable">sound_count</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="514056140395874" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Value">-15</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="452724821628670">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="493165072281127" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="190237712862404" type="Audio">
+                                    <param id="0" name="Audio file">menu_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sound</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="334506184453295">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="678440494406890" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">upsound</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="173099147004918" type="System">
+                            <param id="0" name="Variable">sound_count</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="237181526551908" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="447298226103815" type="status_soung">
+                            <param id="0" name="Frame number">sound_count</param>
+                        </action>
+                        <action id="0" name="Set text" sid="703846449227533" type="setting_s_status">
+                            <param id="0" name="Text">sound_count</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="879700630729821">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="156172552503509" type="System">
+                                    <param id="0" name="Variable">sound_count</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="694860529131814" type="setting_s_status">
+                                    <param id="0" name="Text">&quot;10&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="721507757939686" type="System">
+                                    <param id="0" name="Variable">sound_count</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="690168525206315" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Value">-5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="476263935467535">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="388660995273724" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="585892087566790" type="Audio">
+                                    <param id="0" name="Audio file">menu_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sound</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="318815447851805" title="Subject">
+            <sub-events>
+                <event-block sid="286082816710589">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="431844691973905" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">sub1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="572606921534609" type="status_sub">
+                            <param id="0" name="Text">&quot;Subject : Introduction to CS&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="282318511216975" type="System">
+                            <param id="0" name="Variable">Select_s</param>
+                            <param id="1" name="Value">&quot;introtocs&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="853339352625646">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="570246363606951" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="607110446464555" type="Audio">
+                                    <param id="0" name="Audio file">menu_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sound</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="925762790330161">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="306847981663892" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">sub2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="882700384553969" type="status_sub">
+                            <param id="0" name="Text">&quot;Subject : Network&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="590865064501315" type="System">
+                            <param id="0" name="Variable">Select_s</param>
+                            <param id="1" name="Value">&quot;network&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="980697302968620">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="972557670748904" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="229046777277126" type="Audio">
+                                    <param id="0" name="Audio file">menu_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sound</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="772328570493567">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="807700471913067" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">sub3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="387771340160880" type="status_sub">
+                            <param id="0" name="Text">&quot;Subject : ยังไม่มี&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="635015041408092" type="Function">
+                            <param id="0" name="Name">&quot;path&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="752769610630601">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="829330270747853" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="352069663188845" type="Audio">
+                                    <param id="0" name="Audio file">menu_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">sound</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="850587635019909">
+            <conditions>
+                <condition id="0" name="On function" sid="995489594282657" type="Function">
+                    <param id="0" name="Name">&quot;path&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set at X" sid="390681695347983" type="test">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">&quot;Flook&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Leaderboard</name>
+    <events>
+        <event-block sid="722506736060333">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="205813154120411" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="130261792011245" type="listgame">
+                    <param id="0" name="Unique ID">796</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="360974940912867" type="Browser">
+                    <param id="0" name="URL">&quot;https://flook2563.github.io/Leaderboard/Typegame.html&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="739214094721704">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="324349403727918" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="375018167299472" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="475873689542644">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="833567858835595" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="460985119260075" type="listgame">
+                    <param id="0" name="Unique ID">797</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="506884248616655" type="Browser">
+                    <param id="0" name="URL">&quot;https://flook2563.github.io/Leaderboard/Shootgame.html&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="404345025009924">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="598677091058032" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="382264289117413" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="157879565808806">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="837331506064469" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="849834930131428" type="listgame">
+                    <param id="0" name="Unique ID">798</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="121699037055538" type="Browser">
+                    <param id="0" name="URL">&quot;https://flook2563.github.io/Leaderboard/Adventures.html&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="191444455114208">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="688995905661297" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="564616616604789" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="543297582381111">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="988640648642794" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">listgame</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="936080318736872" type="listgame">
+                    <param id="0" name="Unique ID">803</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="430633962786086" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="889831474854328">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="250846103377303" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="876035019191552" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">sound</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

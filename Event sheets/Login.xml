@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Login</name>
+    <events>
+        <variable constant="0" name="show_username" sid="626003485991242" static="0" type="text"></variable>
+        <variable constant="0" name="email" sid="319046975010584" static="0" type="text"></variable>
+        <variable constant="0" name="login_username" sid="209836997772298" static="0" type="text"></variable>
+        <variable constant="0" name="login_password" sid="476555236525308" static="0" type="text"></variable>
+        <variable constant="0" name="display_name" sid="415812141766877" static="0" type="text"></variable>
+        <event-block sid="355685784704978">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="194785754208299" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="209270980517972" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="598736734578400">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="978512106944935" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_reg_back</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="698231939462246" type="System">
+                    <param id="0" name="Layout">Register</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="891680607505741">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="315239587241503" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="392192382997710" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="430158487382630">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="525937893552819" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_reg_submit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="954185730886261" type="System">
+                    <param id="0" name="Variable">login_username</param>
+                    <param id="1" name="Value">txt_username.Text</param>
+                </action>
+                <action id="-9" name="Set value" sid="119778782199600" type="System">
+                    <param id="0" name="Variable">login_password</param>
+                    <param id="1" name="Value">txt_password.Text</param>
+                </action>
+                <action id="13" name="Load all" sid="801743664743885" type="Register">
+                    <param id="0" name="Tag">&quot;datauser&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="553498242129428">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="843530757779526" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="800212590649561" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="702720061718403">
+            <conditions>
+                <condition id="11" name="On load complete" sid="917280563975299" type="Register">
+                    <param id="0" name="Tag">&quot;datauser&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set at X" sid="850188309169144" type="Array_reg">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">Register.At(login_username,&quot;username&quot;)</param>
+                </action>
+                <action id="2" name="Set at X" sid="362074072390549" type="Array_reg">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">Register.At(login_username,&quot;password&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="320899657677329" type="System">
+                    <param id="0" name="Variable">display_name</param>
+                    <param id="1" name="Value">Register.At(login_username,&quot;name&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="123783574786627" type="System">
+                    <param id="0" name="Variable">email</param>
+                    <param id="1" name="Value">Register.At(login_username,&quot;email&quot;)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="677563047617909">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="921711148538497" type="System">
+                            <param id="0" name="Variable">login_username</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">str(Array_reg.At(0))</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="474951144151150" type="System">
+                            <param id="0" name="Variable">login_password</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">str(Array_reg.At(1))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="633982755906790" type="System">
+                            <param id="0" name="Layout">Home</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="625867340347056">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="740290026504568" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="553546455316323" type="display_login">
+                            <param id="0" name="Text">&quot;Data not found!!!&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="544625037992437" type="txt_username">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="341401766672736" type="txt_password">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

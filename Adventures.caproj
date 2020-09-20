@@ -1,0 +1,2580 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Adventures</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1suqx80s5qurp</unique-id>
+    <saved-with-version>25900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Firebase" version="1">Firebase</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_FirebaseAPIV3" version="1">Firebase API v3</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Firebase_ItemTable" version="0.100000001">Item table</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Firebase_Leaderboard" version="0.100000001">Leader board</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Game</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="bg1" sid="857536315314950">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\005 (3).png" />
+        </object-type>
+        <object-type name="foot" sid="579139930489485">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="143102168573617">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\tileSteel\Default\002.png" />
+        </object-type>
+        <object-type name="player" sid="206862282571067">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="movement" sid="994759021408175" type="string" />
+                <instance-variable name="HP" sid="973555188360700" type="number" />
+                <instance-variable name="select" sid="665086404178586" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="243833108513326">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="871691085936688">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="954561878076431">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="player_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="371861035449500" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\stand\000.png">
+                        <collision-poly>
+                            <point x="0.0769231" y="0.0342679" />
+                            <point x="0.496504" y="0.00311526" />
+                            <point x="0.923077" y="0.0342679" />
+                            <point x="0.762238" y="0.498442" />
+                            <point x="0.692308" y="0.862928" />
+                            <point x="0.496504" y="0.959502" />
+                            <point x="0.272727" y="0.878505" />
+                            <point x="0.244755" y="0.498442" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="0" name="player_run" pingpong="0" repeatcount="1" repeatto="0" sid="569722733518265" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\walk\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\walk\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\walk\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\walk\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\walk\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\walk\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\walk\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\walk\007.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="player_jump" pingpong="0" repeatcount="1" repeatto="0" sid="304633655570163" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\000.png">
+                        <collision-poly>
+                            <point x="0.0677966" y="0.0390879" />
+                            <point x="0.497175" y="0.00325733" />
+                            <point x="0.80226" y="0.114007" />
+                            <point x="0.977401" y="0.498371" />
+                            <point x="0.59887" y="0.76873" />
+                            <point x="0.497175" y="0.863192" />
+                            <point x="0.039548" y="0.977199" />
+                            <point x="0.20904" y="0.498371" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="player_attack" pingpong="0" repeatcount="1" repeatto="0" sid="164191805928050" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\000.png">
+                        <image-point name="Imagepoint 1" x="0.966667" y="0.622222" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\001.png">
+                        <image-point name="Imagepoint 1" x="0.966667" y="0.622222" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\player\002.png">
+                        <image-point name="Imagepoint 1" x="0.966667" y="0.622222" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="player_die" pingpong="0" repeatcount="1" repeatto="0" sid="704192728813411" speed="5">
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.493976" original-source="C:\Users\flook\Downloads\kisspng-headstone-grave-cemetery-clip-art-grave-5ac0271f3e9bb6.9747632215225423672565.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="307363155939758">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Audio" sid="332551936166972">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="arrow" sid="637658392994951">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="478569551503112">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="680507285764483">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="625852625736856" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 Android Game &amp; GamePad Control\Sprite\Animations\Bow_Arrow\Default\000.png">
+                        <collision-poly>
+                            <point x="0.0458015" y="0.0272727" />
+                            <point x="0.496183" y="0.0590909" />
+                            <point x="0.801527" y="0.118182" />
+                            <point x="0.908397" y="0.5" />
+                            <point x="0.603053" y="0.763636" />
+                            <point x="0.496183" y="0.813636" />
+                            <point x="0.0763359" y="0.954545" />
+                            <point x="0.656489" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="door" sid="403634098155040">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="579079318793119" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\door\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\door\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="display" sid="216173255352710">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="407751223184742" speed="0">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\spawner\Default\000.png" />
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\spawner\Default\001.png" />
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\spawner\Default\002.png" />
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\spawner\Default\003.png" />
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\flook\Downloads\key.png">
+                        <collision-poly>
+                            <point x="0.412109" y="0.412109" />
+                            <point x="0.5" y="0.0996094" />
+                            <point x="0.865234" y="0.134766" />
+                            <point x="0.582031" y="0.5" />
+                            <point x="0.541016" y="0.541016" />
+                            <point x="0.5" y="0.777344" />
+                            <point x="0.101563" y="0.898438" />
+                            <point x="0.322266" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="count_hp" sid="972925874194315">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="monster1" sid="915433823439719">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="966828629998872" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="232596697308015">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="991926764032031" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\enemy\Default\000.png" />
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.516129" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\enemy\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="border" sid="512639626290703">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314403882883438" speed="5">
+                    <frame duration="1" hotspotX="0.3" hotspotY="0.66" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="count_door" sid="674324645932943">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="bg_minigame1" sid="441862281935441">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\8.png" />
+        </object-type>
+        <object-type name="foot_minigame1" sid="382111611566979">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="190296375575278">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\ice\Default\000.png" />
+        </object-type>
+        <object-type name="zoombie_minigame1" sid="769455768173053">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="440063812842126" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\000.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498413" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\001.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501053" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\002.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498507" hotspotY="0.501066" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\003.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501071" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\004.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498392" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\005.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498168" hotspotY="0.501048" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\006.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498208" hotspotY="0.501044" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\007.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501057" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\008.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498233" hotspotY="0.501066" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Zombie Survival 2 Player\Project\Animations\zombie\WALKING\009.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="DIE" pingpong="0" repeatcount="1" repeatto="0" sid="852945529241130" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\Downloads\kisspng-headstone-grave-cemetery-clip-art-grave-5ac0271f3e9bb6.9747632215225423672565.png">
+                        <collision-poly>
+                            <point x="0.214" y="0.194545" />
+                            <point x="0.5" y="0.0636364" />
+                            <point x="0.8" y="0.181818" />
+                            <point x="0.85" y="0.5" />
+                            <point x="0.884" y="0.894545" />
+                            <point x="0.5" y="0.914545" />
+                            <point x="0.12" y="0.890909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="minigame1_input" sid="820658585356218">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="minigame_bord" sid="901309178690318">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="390114856314142" speed="5">
+                    <frame duration="1" hotspotX="0.50069" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\KFZ-i6.png">
+                        <collision-poly>
+                            <point x="0.00195503" y="0.00299401" />
+                            <point x="0.99218" y="0.011976" />
+                            <point x="0.997067" y="0.995509" />
+                            <point x="0.00782014" y="0.988024" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="topictext" sid="387020043511865">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="c1text" sid="447283436963389">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="c2text" sid="131161843257531">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="c3text" sid="904205063585770">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="c4text" sid="888826230316866">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="ItemTable" sid="957333036339326">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type global="1" name="FirebaseAPIV3" sid="132004476537792">
+            <plugin id="Rex_FirebaseAPIV3" />
+        </object-type>
+        <object-type global="1" name="Firebase" sid="361597286837864">
+            <plugin id="Rex_Firebase" />
+        </object-type>
+        <object-type name="Function" sid="119531362384853">
+            <plugin id="Function" />
+        </object-type>
+        <object-type global="1" name="QuizArray" sid="477640648885367">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="monster2" sid="285056768799669">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="439615515843409" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="114167368118330">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273060974850392" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\enemy\Default\000.png" />
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.516129" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\enemy\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="monster3" sid="877559703835298">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="382793671966951" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="316414301407998">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="717700969236026" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\enemy\Default\000.png" />
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.516129" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\enemy\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="block" sid="928520073295256">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="745791960687643">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 - Platform Game Basic Complete V1\Sprite Sheet\Animations\tileSteel\Default\002.png" />
+        </object-type>
+        <object-type name="bordermap" sid="861553984859252">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="296855007006317">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="451682359590328" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="slime_monster1" sid="618828062453407">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="219632146830380" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="457902427339706">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212166784786190" speed="3">
+                    <frame duration="1" hotspotX="0.457143" hotspotY="0.5" original-source="C:\Users\flook\Downloads\pngwave (1).png">
+                        <collision-poly>
+                            <point x="0.778115" y="0.673511" />
+                            <point x="0.457845" y="0.814776" />
+                            <point x="0.119315" y="0.691936" />
+                            <point x="0.133361" y="0.5" />
+                            <point x="0" y="0.119198" />
+                            <point x="0.457845" y="0.0424235" />
+                            <point x="0.860992" y="0.235895" />
+                            <point x="0.894704" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.458824" hotspotY="0.508475">
+                        <collision-poly>
+                            <point x="0.776019" y="0.679044" />
+                            <point x="0.459518" y="0.817915" />
+                            <point x="0.12497" y="0.697158" />
+                            <point x="0.138851" y="0.508475" />
+                            <point x="0" y="0.134127" />
+                            <point x="0.459518" y="0.0586536" />
+                            <point x="0.857921" y="0.248846" />
+                            <point x="0.891237" y="0.508475" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="slime_monster2" sid="552990641180099">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="734534102711765" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="571383199585325">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182414448945675" speed="3">
+                    <frame duration="1" hotspotX="0.457143" hotspotY="0.5" original-source="C:\Users\flook\Downloads\pngwave (1).png">
+                        <collision-poly>
+                            <point x="0.136171" y="0.326489" />
+                            <point x="0.456441" y="0.185224" />
+                            <point x="0.794971" y="0.308064" />
+                            <point x="0.780924" y="0.5" />
+                            <point x="0.967748" y="0.880802" />
+                            <point x="0.456441" y="0.957577" />
+                            <point x="0.053294" y="0.764105" />
+                            <point x="0.0195814" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.458824" hotspotY="0.508475">
+                        <collision-poly>
+                            <point x="0.141628" y="0.337905" />
+                            <point x="0.458129" y="0.199034" />
+                            <point x="0.792677" y="0.319791" />
+                            <point x="0.778796" y="0.508475" />
+                            <point x="0.963422" y="0.882822" />
+                            <point x="0.458129" y="0.958296" />
+                            <point x="0.0597258" y="0.768103" />
+                            <point x="0.0264098" y="0.508475" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="slime_monster3" sid="756481217304003">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="496760173402556" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="218728487089828">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="174755992603138" speed="3">
+                    <frame duration="1" hotspotX="0.457143" hotspotY="0.5" original-source="C:\Users\flook\Downloads\pngwave (1).png">
+                        <collision-poly>
+                            <point x="0.136171" y="0.326489" />
+                            <point x="0.456441" y="0.185224" />
+                            <point x="0.794971" y="0.308064" />
+                            <point x="0.780924" y="0.5" />
+                            <point x="0.967748" y="0.880802" />
+                            <point x="0.456441" y="0.957577" />
+                            <point x="0.053294" y="0.764105" />
+                            <point x="0.0195814" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.458824" hotspotY="0.508475">
+                        <collision-poly>
+                            <point x="0.141628" y="0.337905" />
+                            <point x="0.458129" y="0.199034" />
+                            <point x="0.792677" y="0.319791" />
+                            <point x="0.778796" y="0.508475" />
+                            <point x="0.963422" y="0.882822" />
+                            <point x="0.458129" y="0.958296" />
+                            <point x="0.0597258" y="0.768103" />
+                            <point x="0.0264098" y="0.508475" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="slime_monster4" sid="775145364219058">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="793231766357849" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="797791002071472">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568827397183617" speed="3">
+                    <frame duration="1" hotspotX="0.457143" hotspotY="0.5" original-source="C:\Users\flook\Downloads\pngwave (1).png">
+                        <collision-poly>
+                            <point x="0.136171" y="0.326489" />
+                            <point x="0.456441" y="0.185224" />
+                            <point x="0.794971" y="0.308064" />
+                            <point x="0.780924" y="0.5" />
+                            <point x="0.967748" y="0.880802" />
+                            <point x="0.456441" y="0.957577" />
+                            <point x="0.053294" y="0.764105" />
+                            <point x="0.0195814" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.458824" hotspotY="0.508475">
+                        <collision-poly>
+                            <point x="0.141628" y="0.337905" />
+                            <point x="0.458129" y="0.199034" />
+                            <point x="0.792677" y="0.319791" />
+                            <point x="0.778796" y="0.508475" />
+                            <point x="0.963422" y="0.882822" />
+                            <point x="0.458129" y="0.958296" />
+                            <point x="0.0597258" y="0.768103" />
+                            <point x="0.0264098" y="0.508475" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="slime_monster5" sid="496955663661988">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="373212444775985" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="471974982306840">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="358402260304697" speed="3">
+                    <frame duration="1" hotspotX="0.457143" hotspotY="0.5" original-source="C:\Users\flook\Downloads\pngwave (1).png">
+                        <collision-poly>
+                            <point x="0.136171" y="0.326489" />
+                            <point x="0.456441" y="0.185224" />
+                            <point x="0.794971" y="0.308064" />
+                            <point x="0.780924" y="0.5" />
+                            <point x="0.967748" y="0.880802" />
+                            <point x="0.456441" y="0.957577" />
+                            <point x="0.053294" y="0.764105" />
+                            <point x="0.0195814" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.458824" hotspotY="0.508475">
+                        <collision-poly>
+                            <point x="0.141628" y="0.337905" />
+                            <point x="0.458129" y="0.199034" />
+                            <point x="0.792677" y="0.319791" />
+                            <point x="0.778796" y="0.508475" />
+                            <point x="0.963422" y="0.882822" />
+                            <point x="0.458129" y="0.958296" />
+                            <point x="0.0597258" y="0.768103" />
+                            <point x="0.0264098" y="0.508475" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="boxjump" sid="580600458866134">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807693975716435" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MonA" sid="394111323396375">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="walk" sid="345111126829313" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="549533654296905">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970510586673937" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.46875" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\a.png">
+                        <collision-poly>
+                            <point x="0.940476" y="0.46875" />
+                            <point x="0.940476" y="0.742188" />
+                            <point x="0.52381" y="0.760417" />
+                            <point x="0.0793651" y="0.760417" />
+                            <point x="0.190476" y="0.46875" />
+                            <point x="0.107143" y="0.195313" />
+                            <point x="0.52381" y="0.0677083" />
+                            <point x="0.884921" y="0.231771" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MonB" sid="838883040356916">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="walk" sid="353467194317999" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="950179593310184">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="679104380824186" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\b.png">
+                        <collision-poly>
+                            <point x="0.241379" y="0.258065" />
+                            <point x="0.5" y="0.0483871" />
+                            <point x="0.775862" y="0.241935" />
+                            <point x="0.931035" y="0.5" />
+                            <point x="0.844828" y="0.822581" />
+                            <point x="0.5" y="0.806452" />
+                            <point x="0.224138" y="0.758065" />
+                            <point x="0.0344828" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MonC" sid="196026717136933">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="walk" sid="761457760597873" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="791064448948858">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959452803807030" speed="5">
+                    <frame duration="1" hotspotX="0.480769" hotspotY="0.481481" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\c.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.166667" />
+                            <point x="0.480769" y="0.037037" />
+                            <point x="0.807692" y="0.166667" />
+                            <point x="0.576923" y="0.481481" />
+                            <point x="0.769231" y="0.759259" />
+                            <point x="0.480769" y="0.777778" />
+                            <point x="0.192308" y="0.759259" />
+                            <point x="0.0576923" y="0.481481" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MonD" sid="400385405358051">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="walk" sid="188190658692773" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="538578521402744">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831550903367801" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.460317" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\d.png">
+                        <collision-poly>
+                            <point x="0.248677" y="0.201058" />
+                            <point x="0.507937" y="0.0529101" />
+                            <point x="0.748677" y="0.219577" />
+                            <point x="0.878307" y="0.460317" />
+                            <point x="0.730159" y="0.68254" />
+                            <point x="0.507937" y="0.775132" />
+                            <point x="0.248677" y="0.719577" />
+                            <point x="0.137566" y="0.460317" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pic_a" sid="249013911866163">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741083367940466" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.425" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\a.png">
+                        <collision-poly>
+                            <point x="1" y="0.419729" />
+                            <point x="1" y="0.709865" />
+                            <point x="0.537925" y="0.729207" />
+                            <point x="0" y="0.729207" />
+                            <point x="0.0148213" y="0.419729" />
+                            <point x="0" y="0.129594" />
+                            <point x="0.537925" y="0" />
+                            <point x="1" y="0.168279" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pic_b" sid="310437623444192">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726529879441255" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\b.png">
+                        <collision-poly>
+                            <point x="0.241379" y="0.258065" />
+                            <point x="0.5" y="0.0483871" />
+                            <point x="0.775862" y="0.241935" />
+                            <point x="0.931035" y="0.5" />
+                            <point x="0.844828" y="0.822581" />
+                            <point x="0.5" y="0.806452" />
+                            <point x="0.224138" y="0.758065" />
+                            <point x="0.0344828" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pic_c" sid="722157115286110">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187793912108144" speed="5">
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.475" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\c.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.166667" />
+                            <point x="0.480769" y="0.037037" />
+                            <point x="0.807692" y="0.166667" />
+                            <point x="0.576923" y="0.481481" />
+                            <point x="0.769231" y="0.759259" />
+                            <point x="0.480769" y="0.777778" />
+                            <point x="0.192308" y="0.759259" />
+                            <point x="0.0576923" y="0.481481" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pic_d" sid="523348560556950">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="954009950250237" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.45" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\d.png">
+                        <collision-poly>
+                            <point x="0.245283" y="0.2" />
+                            <point x="0.509434" y="0.0545455" />
+                            <point x="0.754717" y="0.218182" />
+                            <point x="0.886792" y="0.454545" />
+                            <point x="0.735849" y="0.672727" />
+                            <point x="0.509434" y="0.763636" />
+                            <point x="0.245283" y="0.709091" />
+                            <point x="0.132075" y="0.454545" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg" sid="325612021048391">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="btn_home_txt" sid="572032756385269">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961320418973875" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_txt\Default\000.png">
+                        <collision-poly>
+                            <point x="0.0030303" y="0.0125" />
+                            <point x="0.99697" y="0.0125" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="155500112091032">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="554796949217355" speed="5">
+                    <frame duration="1" hotspotX="0.500538" hotspotY="0.500761" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Sprite2\Default\000.png">
+                        <collision-poly>
+                            <point x="0.0107643" y="0.0152207" />
+                            <point x="0.499462" y="0.00152207" />
+                            <point x="0.983854" y="0.0228311" />
+                            <point x="0.979548" y="0.971081" />
+                            <point x="0.0161464" y="0.977169" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_game" sid="137782997718548">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="473642186694598" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_lead" sid="211259928016377">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="449105205342091" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_overview" sid="227627219677400">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632907741819449" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="listgame" sid="263556302409105">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mouse" sid="633360402983645">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="owl" sid="440988028607893">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961615608217236" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\024.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\025.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Player\Default\026.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg_shootgame" sid="321008732366050">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\001.png" />
+        </object-type>
+        <object-type name="bgwall" sid="755164412568330">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Textures\TiledBackground.png" />
+        </object-type>
+        <object-type name="bgwall2" sid="598187973646190">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Textures\TiledBackground2.png" />
+        </object-type>
+        <object-type name="spritefont" sid="699667014600883">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="990633971544172">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641563689360115" speed="0">
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\000.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\001.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\002.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\003.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\004.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\005.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\006.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\007.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\008.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\009.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\010.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\011.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\012.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\013.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\014.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\015.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\016.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\017.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\018.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\019.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\020.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\021.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\022.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\023.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\024.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\025.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.512195" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Animations\Sprite\Default\026.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_font" sid="668871450143861">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="over" sid="433935079284893" type="boolean" />
+            </instance-variables>
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\typing game\Textures\SpriteFont.png" />
+        </object-type>
+        <object-type global="1" name="ArrayLetters" sid="623848245060244">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="ArrayWords" sid="941063110539909">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="txtWord" sid="717587344888265">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text" sid="732395496657592">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="black" sid="908750884809502">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822047312527978" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\A\off\000.png">
+                        <collision-poly>
+                            <point x="0.133333" y="0.133333" />
+                            <point x="0.5" y="0.0166667" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="0.983333" y="0.5" />
+                            <point x="0.866667" y="0.866667" />
+                            <point x="0.5" y="0.983333" />
+                            <point x="0.133333" y="0.866667" />
+                            <point x="0.0166667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_menu" sid="428613492080845">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="show" sid="710443328270437" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LiteTween" sid="149059986509397">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="LiteTween2" sid="638747685744295">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232268175108759" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_menu\Default\000.png">
+                        <image-point name="Imagepoint 1" x="0.914286" y="0.0846774" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0.383065" />
+                        <image-point name="Imagepoint 3" x="0.505714" y="0.653226" />
+                        <collision-poly>
+                            <point x="0.0114286" y="0.016129" />
+                            <point x="0.5" y="0.00403226" />
+                            <point x="0.982857" y="0.0241935" />
+                            <point x="0.98" y="0.971774" />
+                            <point x="0.0171429" y="0.975806" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_menu_home" sid="343517291892702">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632626251843081" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_menu_home\Default\000.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_menu_re" sid="599717942811624">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="585981480854252" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_menu_re\Default\000.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_menu_close" sid="137250505039377">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TiledBackground" sid="459368970095731">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="921165356300239">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="LiteTween2" sid="391444140710972">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="bg_typethealpha" sid="297107771687837">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\001.png" />
+        </object-type>
+        <object-type name="btn_txt" sid="848883138921384">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861331617387783" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_txt\Default\000.png">
+                        <collision-poly>
+                            <point x="0.0030303" y="0.0125" />
+                            <point x="0.99697" y="0.0125" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_txt_txt" sid="606525122200685">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btn_nofi" sid="404022484143512">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793101178238904" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_nofi\Default\000.png">
+                        <collision-poly>
+                            <point x="0.16" y="0.16" />
+                            <point x="0.5" y="0" />
+                            <point x="0.86" y="0.14" />
+                            <point x="1" y="0.5" />
+                            <point x="0.86" y="0.86" />
+                            <point x="0.5" y="1" />
+                            <point x="0.14" y="0.86" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_nofig" sid="759965900955144">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="show2" sid="364862033458149" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LiteTween" sid="615055574930224">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="LiteTween2" sid="347730155880740">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="351269645109431" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_nofig\Default\000.png">
+                        <image-point name="Imagepoint 1" x="0.92" y="0.0967742" />
+                        <collision-poly>
+                            <point x="0.0114286" y="0.016129" />
+                            <point x="0.5" y="0.00403226" />
+                            <point x="0.982857" y="0.0241935" />
+                            <point x="0.98" y="0.971774" />
+                            <point x="0.0171429" y="0.975806" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_nofi_close" sid="507652136235304">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="box_ans1" sid="547413837017818">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814137662329571" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans1\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans1\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="box_ans2" sid="436015551917626">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="718968660462660" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans2\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans2\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="box_ans3" sid="355014485890816">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="942896078224543" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans3\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans3\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="box_ans4" sid="837161633586405">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="552556112443333" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans3\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans3\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="box_ans5" sid="716702282232757">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194623660386203" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans3\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\box_ans3\Default\001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="anwer_txt" sid="834672437512298">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="52" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="375950199136935" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\024.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\025.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\026.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\027.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\028.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\029.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\030.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\031.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\032.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\033.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\034.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\035.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\036.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\037.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\038.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\039.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\040.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\041.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\042.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\043.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\044.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\045.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\046.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\047.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\048.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\049.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\050.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\anwer_txt\Default\051.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_a_z" sid="471561622349387">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="26" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936462215886616" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\015.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\016.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\018.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\019.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\020.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\021.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\022.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\023.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\024.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\txt_a_z\Default\025.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Spriteclose" sid="784997985744801">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="150493314915001" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\Sprite\Default\000.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="key" sid="440681252968367">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mode" sid="256827803678136">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_ans1" sid="763779478859667">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_normal" sid="205302186680817">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_fast" sid="226391427938361">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btn_mode_fast" sid="522630798759111">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="279831535917979" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_mode_fast\Default\000.png">
+                        <collision-poly>
+                            <point x="0.00666667" y="0.0333333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993333" y="0.0333333" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_mode_normal" sid="196106122686471">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513142137612221" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_mode_normal\Default\000.png">
+                        <collision-poly>
+                            <point x="0.00666667" y="0.0333333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993333" y="0.0333333" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="water" sid="963728075040436">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="629124505783132">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\water\Default\000.png" />
+        </object-type>
+        <object-type name="tree" sid="968376623157996">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274669363165472" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501053" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\Tree\Default\000.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.157895" />
+                            <point x="0.5" y="0.0126316" />
+                            <point x="0.7675" y="0.195789" />
+                            <point x="0.9825" y="0.498947" />
+                            <point x="0.5" y="0.989474" />
+                            <point x="0.365" y="0.692632" />
+                            <point x="0.0375" y="0.498947" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wall_laser" sid="199222975309810">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="740514324464105">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651046167021310" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 Platform Game Basic Complete V2\Sprite Sheet\Animations\laser\blue\000.png">
+                        <collision-poly>
+                            <point x="0.05" y="0.0138889" />
+                            <point x="0.95" y="0.0138889" />
+                            <point x="0.95" y="0.986111" />
+                            <point x="0.05" y="0.986111" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="obt_key" sid="499363948534523">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="892259636863899">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="478674140593512" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 Platform Game Basic Complete V2\Sprite Sheet\Animations\keyyellow\Default\000.png">
+                        <collision-poly>
+                            <point x="0.0967742" y="0.157895" />
+                            <point x="0.5" y="0.368421" />
+                            <point x="0.774194" y="0.368421" />
+                            <point x="0.983871" y="0.5" />
+                            <point x="0.919355" y="0.868421" />
+                            <point x="0.5" y="0.631579" />
+                            <point x="0.0967742" y="0.842105" />
+                            <point x="0.016129" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tree2" sid="594728733073180">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181839056476982" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50165" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\Tree\000.png">
+                        <collision-poly>
+                            <point x="0.144366" y="0.135314" />
+                            <point x="0.5" y="0.029703" />
+                            <point x="0.827465" y="0.161716" />
+                            <point x="0.947183" y="0.49835" />
+                            <point x="0.573944" y="0.60066" />
+                            <point x="0.5" y="0.9967" />
+                            <point x="0.433099" y="0.594059" />
+                            <point x="0.133803" y="0.49835" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rock1" sid="866435565750843">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="743567301208583" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="116308140261072">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757964863974925" speed="5">
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\001.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\003.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\006.png" />
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\009.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rock2" sid="856111172964924">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="294008769205979" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="623254346570453">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271650105907291" speed="5">
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\001.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\003.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\006.png" />
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\009.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rock3" sid="729162382515659">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="560893460759765" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="516767856738214">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805442625141694" speed="5">
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\001.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\003.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\006.png" />
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\009.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rock4" sid="414053549193330">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="704655412407581" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="928140001253379">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="241708095647633" speed="5">
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\001.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\003.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\006.png" />
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\009.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rock5" sid="294137983071245">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="600466395130139" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="207385165713270">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650470423165984" speed="5">
+                    <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\001.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\003.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\006.png" />
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\Enemy\Default\009.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wall_laser2" sid="847562526741213">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="725789972437065">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875356840011537" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Construct 2\CONSTRUCT 2 -  25 GAME TUTORIAL\สอน Construct 2 Platform Game Basic Complete V2\Sprite Sheet\Animations\laser\red\000.png">
+                        <collision-poly>
+                            <point x="0.05" y="0.0138889" />
+                            <point x="0.95" y="0.0138889" />
+                            <point x="0.95" y="0.986111" />
+                            <point x="0.05" y="0.986111" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="obt_key2" sid="567221422502516">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="240786737869463">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="687011693263126" speed="5">
+                    <frame duration="1" hotspotX="0.507042" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\giftscore\Default\000.png">
+                        <collision-poly>
+                            <point x="0.15493" y="0.152778" />
+                            <point x="0.492958" y="0.0416667" />
+                            <point x="0.84507" y="0.152778" />
+                            <point x="0.943662" y="0.5" />
+                            <point x="0.84507" y="0.847222" />
+                            <point x="0.492958" y="0.972222" />
+                            <point x="0.140845" y="0.861111" />
+                            <point x="0.056338" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="monlv41" sid="606932305716961">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="406967476825929" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="292098214932481">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="417526789454788" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\000.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\002.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.505263" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\003.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="monlv42" sid="154012892076265">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="112543687640692" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="992368400099642">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="259831740975239" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\000.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\002.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.505263" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\003.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="monlv43" sid="801703089467778">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="488597146290024" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="802184981704423">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804196503226056" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\000.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\002.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.505263" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\003.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="monlv44" sid="964801862434684">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="arrow" sid="725741676092776" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="654699608921016">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="928166558261661" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\000.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\002.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.505263" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\player3\run\003.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bgend" sid="702992839480446">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\005 (3).png" />
+        </object-type>
+        <object-type name="footend" sid="288538868747339">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="580426594628116">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="478429247336529" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="boss" sid="497855791285873">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="hp" sid="454257253572869" type="number" />
+                <instance-variable name="stage" sid="342062308368472" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="121656077230943">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="616649253933235">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="603435433855768">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="8" loop="1" name="walk" pingpong="0" repeatcount="0" repeatto="0" sid="786402310764284" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\walk\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\walk\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\walk\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\walk\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\walk\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\walk\005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\walk\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\walk\007.png" />
+                </animation>
+                <animation framecount="5" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="347254461673133" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\idle\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\idle\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\idle\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\idle\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503448" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\idle\004.png" />
+                </animation>
+                <animation framecount="21" loop="0" name="attack" pingpong="0" repeatcount="0" repeatto="0" sid="444039268659413" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503356" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\001.png" />
+                    <frame duration="1" hotspotX="0.502538" hotspotY="0.503067" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\002.png" />
+                    <frame duration="1" hotspotX="0.502463" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\003.png" />
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.502994" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\004.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\005.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\006.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\007.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\008.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\009.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\010.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\011.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\012.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\013.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\014.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\015.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\016.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\017.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\018.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\019.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.502703" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\020.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="miniboss1" sid="297630131028915">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="stage" sid="106721928806966" type="number" />
+                <instance-variable name="hp" sid="856070628236358" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="737060139698801">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="307993344358754">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="317784103036762">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="idle" pingpong="0" repeatcount="0" repeatto="0" sid="740412327760028" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\idle\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\idle\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\idle\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\idle\003.png" />
+                </animation>
+                <animation framecount="10" loop="0" name="attack" pingpong="0" repeatcount="0" repeatto="0" sid="698796265811632" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507937" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\001.png" />
+                    <frame duration="1" hotspotX="0.506173" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\005.png" />
+                    <frame duration="1" hotspotX="0.504762" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507937" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507937" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507937" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\009.png" />
+                </animation>
+                <animation framecount="7" loop="0" name="die" pingpong="0" repeatcount="1" repeatto="0" sid="501987169999469" speed="5">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\000.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\001.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\002.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\003.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\004.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\005.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\006.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="hit" pingpong="0" repeatcount="1" repeatto="0" sid="394301842146372" speed="5">
+                    <frame duration="1" hotspotX="0.506329" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\hit\000.png" />
+                </animation>
+                <animation framecount="5" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="854778298383480" speed="17">
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\000.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\001.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\002.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\003.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\004.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="miniboss2" sid="914160552757604">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="stage" sid="350305943164252" type="number" />
+                <instance-variable name="hp" sid="148496069637124" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="985666487794275">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="365733682047987">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="878246629780682">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="idle" pingpong="0" repeatcount="0" repeatto="0" sid="430246322328656" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\idle\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\idle\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\idle\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\idle\003.png" />
+                </animation>
+                <animation framecount="10" loop="0" name="attack" pingpong="0" repeatcount="0" repeatto="0" sid="113542536595699" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507937" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\001.png" />
+                    <frame duration="1" hotspotX="0.506173" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\005.png" />
+                    <frame duration="1" hotspotX="0.504762" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507937" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507937" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507937" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\attack\009.png" />
+                </animation>
+                <animation framecount="5" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="782567683387023" speed="17">
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\000.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\001.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\002.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\003.png" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\run\004.png" />
+                </animation>
+                <animation framecount="7" loop="0" name="die" pingpong="0" repeatcount="1" repeatto="0" sid="466821511024553" speed="5">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\000.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\001.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\002.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\003.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\004.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\005.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\die\006.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="hit" pingpong="0" repeatcount="1" repeatto="0" sid="638043945838684" speed="5">
+                    <frame duration="1" hotspotX="0.506329" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\enemy1\hit\000.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="border_L" sid="239703428082644">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807941187749229" speed="5">
+                    <frame duration="1" hotspotX="0.54" hotspotY="0.54" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="border_R" sid="824295493236057">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836817673768324" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="scoll" sid="661199559223424">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="884998717861630" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="display_boss" sid="367836471646862">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123303439513554" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\boss\attack1\000.png">
+                        <collision-poly>
+                            <point x="0.159091" y="0.187919" />
+                            <point x="0.5" y="0.0268456" />
+                            <point x="0.823864" y="0.208054" />
+                            <point x="0.982955" y="0.496644" />
+                            <point x="0.909091" y="0.892617" />
+                            <point x="0.5" y="0.973154" />
+                            <point x="0.0625" y="0.926175" />
+                            <point x="0.0625" y="0.496644" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="display_hp" sid="548720793895922">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="600415325045577" speed="5">
+                    <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\HP\Default\000.png" />
+                    <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\HP\Default\001.png" />
+                    <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\HP\Default\002.png" />
+                    <frame duration="1" hotspotX="0.504132" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\HP\Default\003.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="text_minigame2" sid="662825484135080">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="670576497818235">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="count_select" sid="744509141870567">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btn_setting" sid="208729272978839">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="205228633976701" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_exit" sid="276454785229246">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575546306925598" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_r_game" sid="186558624899328">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="266830793190750" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Register" sid="763198505527345">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type name="txt_reg_name" sid="697171914389217">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="txt_reg_username" sid="978623987762541">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="txt_reg_password" sid="633549312500551">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="txt_reg_password2" sid="608462628887488">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="txt_reg_email" sid="361683588395126">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="btn_reg_submit" sid="344160586582537">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="635537127614902" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_reg_back" sid="870783475530284">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216856269798364" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="reg_display" sid="125374779659278">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="Array_reg" sid="610198160657941">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="txt" sid="636558224428477">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="reg_name" sid="448449161085729">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837180351426455" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\reg_name\Default\000.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.333333" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.833333" y="0.833333" />
+                            <point x="0.5" y="0.866667" />
+                            <point x="0.2" y="0.8" />
+                            <point x="0.133333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="reg_login" sid="738429408422019">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524074993897089" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\login_2\Default\000.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.84375" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.9375" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="reg_login2" sid="309845715968026">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513371466833513" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\login_1\Default\000.png">
+                        <collision-poly>
+                            <point x="0.433333" y="0.433333" />
+                            <point x="0.5" y="0.0666667" />
+                            <point x="0.9" y="0.1" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.566667" y="0.566667" />
+                            <point x="0.5" y="0.566667" />
+                            <point x="0.0333333" y="0.966667" />
+                            <point x="0.333333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="reg_mail" sid="441239363059356">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="751483067267150" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\reg_mail\Default\000.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.8" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.833333" y="0.833333" />
+                            <point x="0.166667" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_username" sid="155134276769573">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="txt_password" sid="519060425854147">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="display_login" sid="244922546694507">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="shootgame" sid="570013178150453">
+            <plugin id="Rex_Firebase_Leaderboard" />
+        </object-type>
+        <object-type global="1" name="Adventures" sid="957129666111086">
+            <plugin id="Rex_Firebase_Leaderboard" />
+        </object-type>
+        <object-type global="1" name="Game" sid="938787132766216">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Browser" sid="641995048269000">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Dorank" sid="923575991857224">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="614090139670376" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\DoRanking\Default\000.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.1" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8875" y="0.1125" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="0.975" />
+                            <point x="0.1125" y="0.8875" />
+                            <point x="0.0125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="show_display" sid="783773522902349">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="319124793798908" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\pngwave.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\clipart2242043.png" />
+                    <frame duration="1" hotspotX="0.4875" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\professional-services-91612a9a52b367e36397c6ad58e0712e.png" />
+                    <frame duration="1" hotspotX="0.4625" hotspotY="0.525" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\kisspng-white-hat-security-hacker-anonymous-clip-art-anonymous-5ac1b20513ae55.0509624915226434610806.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\jesus.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_ov_name" sid="381701915808176">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_over_name" sid="541523688862225">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_over_mail" sid="123295070142880">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_over_lv" sid="707996554054269">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="line" sid="325355523817151">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="517544554336468" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ov_pic1" sid="978901915269601">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713613102518731" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\mon.png">
+                        <collision-poly>
+                            <point x="0.05" y="0.05" />
+                            <point x="0.5" y="0.15" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.95" y="0.5" />
+                            <point x="0.9" y="0.9" />
+                            <point x="0.5" y="1" />
+                            <point x="0.075" y="0.925" />
+                            <point x="0.025" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ov_pic2" sid="150298260555726">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="169143377380667" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\kisspng-computer-icons-encapsulated-postscript-abc-5abcfa37546462.6302212215223342633457.png">
+                        <collision-poly>
+                            <point x="0.332031" y="0.332031" />
+                            <point x="0.5" y="0.0488281" />
+                            <point x="0.779297" y="0.220703" />
+                            <point x="0.652344" y="0.5" />
+                            <point x="0.929688" y="0.929688" />
+                            <point x="0.078125" y="0.921875" />
+                            <point x="0.419922" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ov_pic3" sid="381731212185685">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543350215834083" speed="5">
+                    <frame duration="1" hotspotX="0.527907" hotspotY="0.490358" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\ov\download-free-png-which-english-word-has-45-letters-the-worlds-english-words-png-1240_775-removebg-preview.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.30854" />
+                            <point x="0.527907" y="0.0137741" />
+                            <point x="0.972093" y="0.289256" />
+                            <point x="0.962791" y="0.487603" />
+                            <point x="0.888372" y="0.589532" />
+                            <point x="0.527907" y="0.975207" />
+                            <point x="0.0790698" y="0.694215" />
+                            <point x="0.0697674" y="0.487603" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_1" sid="904090586713897">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_2" sid="462675722577381">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_3" sid="364682658138138">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ov_think" sid="464548548163777">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="209056333391536" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\Downloads\icon-thinking-2.jpg">
+                        <collision-poly>
+                            <point x="0.171233" y="0.153061" />
+                            <point x="0.5" y="0.00102041" />
+                            <point x="0.875571" y="0.111224" />
+                            <point x="0.981735" y="0.5" />
+                            <point x="0.83105" y="0.84898" />
+                            <point x="0.5" y="1" />
+                            <point x="0.133562" y="0.880612" />
+                            <point x="0.0216895" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ov_print" sid="916929877241575">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="304659961036254" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\Downloads\pngguru.com.png">
+                        <collision-poly>
+                            <point x="0.974609" y="0.5" />
+                            <point x="0.767578" y="0.767578" />
+                            <point x="0.5" y="0.894531" />
+                            <point x="0.0644531" y="0.935547" />
+                            <point x="0.130859" y="0.5" />
+                            <point x="0.341797" y="0.341797" />
+                            <point x="0.5" y="0.0449219" />
+                            <point x="0.603516" y="0.396484" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="TypeGame" sid="894925632478075">
+            <plugin id="Rex_Firebase_Leaderboard" />
+        </object-type>
+        <object-type name="status_re" sid="231486907767800">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447974031447702" speed="0">
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\0.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\1.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\2.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\3.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\4.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\5.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\6.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\7.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\8.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\9.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="status_w" sid="580248179920684">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556307573104522" speed="0">
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\0.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\1.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\2.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\3.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\4.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\5.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\6.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\7.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\8.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\9.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_per1" sid="125651683628071">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_per2" sid="237324671018215">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="IntoToCS" sid="493052028843517">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type name="status_soung" sid="191852106108849">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310508149084156" speed="0">
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\0.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\1.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\2.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\3.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\4.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\5.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\6.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\7.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\8.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\9.png" />
+                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sound" sid="396600226609666">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="139851277103024" speed="5">
+                    <frame duration="1" hotspotX="0.491228" hotspotY="0.491228" original-source="C:\Users\flook\Downloads\—Pngtree—sound icon_3581551.png">
+                        <collision-poly>
+                            <point x="0.154386" y="0.154386" />
+                            <point x="0.491228" y="0.0152047" />
+                            <point x="0.82807" y="0.154386" />
+                            <point x="0.967251" y="0.491228" />
+                            <point x="0.82807" y="0.82807" />
+                            <point x="0.491228" y="0.967251" />
+                            <point x="0.154386" y="0.82807" />
+                            <point x="0.0152047" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="setting_s_status" sid="943755127194048">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="upsound" sid="392287293563642">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="588943185116483" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="downsound" sid="493179922396078">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="579748834461804" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Network" sid="543481894090825">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type name="status_sub" sid="352754821424897">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="sub1" sid="379934987896956">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193081350306127" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sub2" sid="674866244040587">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="611601682959231" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sub3" sid="758866027365630">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995348766232972" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="InTrotoCS_score" sid="310330940198695">
+            <plugin id="Rex_Firebase_Leaderboard" />
+        </object-type>
+        <object-type global="1" name="Network_score" sid="108257521241484">
+            <plugin id="Rex_Firebase_Leaderboard" />
+        </object-type>
+        <object-type name="txt_sub1" sid="197521862655933">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_sub2" sid="171606699818155">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_sub3" sid="466175943439333">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="Date" sid="992648751286440">
+            <plugin id="Rex_Date" />
+        </object-type>
+        <object-type global="1" name="test" sid="859547667029343">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="Adventures_array" sid="452178920021407">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="Adventures_table" sid="145553145489656">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type global="1" name="Adventures_data" sid="869136176711020">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type global="1" name="shootgame_table" sid="345458507004666">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type global="1" name="Shootgame_array" sid="195262344497912">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="TypeGame_table" sid="931951825505666">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type global="1" name="Type_array" sid="780151408894640">
+            <plugin id="Arr" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="box_ans" plugin-id="Sprite" sid="631846431795349">
+            <members>
+                <member>box_ans1</member>
+                <member>box_ans2</member>
+                <member>box_ans3</member>
+                <member>box_ans4</member>
+                <member>box_ans5</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Login.xml</layout>
+        <layout>Register.xml</layout>
+        <layout>Home.xml</layout>
+        <layout>Leaderboard.xml</layout>
+        <layout>Setting.xml</layout>
+        <layout>Overview.xml</layout>
+        <layout>Game.xml</layout>
+        <layout>LV1.xml</layout>
+        <layout>LV2.xml</layout>
+        <layout>LV3.xml</layout>
+        <layout>LV4.xml</layout>
+        <layout>LV5.xml</layout>
+        <layout>Minigame 1.xml</layout>
+        <layout>Minigame LV2 1.xml</layout>
+        <layout>Minigame LV3 1.xml</layout>
+        <layout>Minigame LV4 1.xml</layout>
+        <layout>Minigame LV5 1.xml</layout>
+        <layout>Minigame 2.xml</layout>
+        <layout>Minigame LV2 2.xml</layout>
+        <layout>Minigame LV3 2.xml</layout>
+        <layout>Minigame LV4 2.xml</layout>
+        <layout>Minigame LV5 2.xml</layout>
+        <layout>shoot game.xml</layout>
+        <layout>Type the Alphabet.xml</layout>
+        <layout>Type the Alphabet - slow.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>LV1.xml</event-sheet>
+        <event-sheet>LV2.xml</event-sheet>
+        <event-sheet>Minigame 1.xml</event-sheet>
+        <event-sheet>Minigame 2.xml</event-sheet>
+        <event-sheet>Game.xml</event-sheet>
+        <event-sheet>shoot game.xml</event-sheet>
+        <event-sheet>Type the Alphabet.xml</event-sheet>
+        <event-sheet>Type the Alphabet - slow.xml</event-sheet>
+        <event-sheet>LV4.xml</event-sheet>
+        <event-sheet>LV3.xml</event-sheet>
+        <event-sheet>Minigame LV2 1.xml</event-sheet>
+        <event-sheet>Minigame LV2 2.xml</event-sheet>
+        <event-sheet>Minigame LV3 1.xml</event-sheet>
+        <event-sheet>Minigame LV3 2.xml</event-sheet>
+        <event-sheet>Minigame LV4 1.xml</event-sheet>
+        <event-sheet>Minigame LV4 2.xml</event-sheet>
+        <event-sheet>LV5.xml</event-sheet>
+        <event-sheet>Minigame LV5 2.xml</event-sheet>
+        <event-sheet>Minigame LV5 1.xml</event-sheet>
+        <event-sheet>Home.xml</event-sheet>
+        <event-sheet>Register.xml</event-sheet>
+        <event-sheet>Login.xml</event-sheet>
+        <event-sheet>Leaderboard.xml</event-sheet>
+        <event-sheet>Setting.xml</event-sheet>
+        <event-sheet>Overview.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Audio" uid="4">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="38" />
+        <global-instance type="Mouse" uid="108" />
+        <global-instance type="Browser" uid="805" />
+    </global-instances>
+    <sounds-folder>
+        <file name="jump1.ogg" />
+        <file name="button.ogg" />
+        <file name="shoot.ogg" />
+        <file name="explosion.ogg" />
+        <file name="bgmusic.ogg" />
+        <file name="dead.ogg" />
+        <file name="sound1.ogg" />
+        <file name="blood_impact.ogg" />
+        <file name="Applause.m4a" />
+        <file name="Applause.ogg" />
+        <file name="blub1.m4a" />
+        <file name="blub1.ogg" />
+        <file name="Boo.m4a" />
+        <file name="Boo.ogg" />
+        <file name="click.m4a" />
+        <file name="click.ogg" />
+        <file name="Now.m4a" />
+        <file name="Now.ogg" />
+        <file name="sfx1.m4a" />
+        <file name="sfx1.ogg" />
+        <file name="ABC-LV-1-mp3cut.net-1.ogg" />
+        <file name="ABC-LV3-2.m4a" />
+        <file name="ABC-LV3-2.ogg" />
+        <file name="ABD-LV-2-mp3cut.net.ogg" />
+        <file name="songa-z.ogg" />
+        <file name="menu_click.ogg" />
+        <file name="why_did_you_do_it.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
