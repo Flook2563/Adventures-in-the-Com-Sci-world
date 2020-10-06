@@ -157,6 +157,10 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="62" name="Go online" sid="353883834244746" type="Firebase" />
+                <action id="-9" name="Set value" sid="723408858777053" type="System">
+                    <param id="0" name="Variable">acheck_post</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="404203641796751">
@@ -2027,6 +2031,10 @@
                     <param id="0" name="Variable">time_check</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="222905590696509" type="System">
+                    <param id="0" name="Variable">acheck_post</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="436611085680529">
@@ -2076,11 +2084,11 @@
                             <param id="1" name="Value">a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q+r+s+t+u+v+w+x+y+z</param>
                         </action>
                         <action id="0" name="Set text" sid="859192533398079" type="txt_ans1">
-                            <param id="0" name="Text">&quot;คุณพิมพ์ถูก &quot;&amp;true&amp;&quot; ตัว และพิมพ์ผิด &quot;&amp;(26-true)&amp;&quot; ตัว ใช้เวลา &quot;&amp;time1&amp;&quot; วินาที&quot;</param>
+                            <param id="0" name="Text">&quot;คุณพิมพ์ถูก &quot;&amp;true&amp;&quot; ตัว และพิมพ์ผิด &quot;&amp;(26-true)&amp;&quot; ตัว ใช้เวลา &quot;&amp;time2&amp;&quot; วินาที&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="106759028948950" type="System">
                             <param id="0" name="Variable">time_typegame</param>
-                            <param id="1" name="Value">time1</param>
+                            <param id="1" name="Value">time2</param>
                         </action>
                         <action id="0" name="Call function" sid="659712518528226" type="Function">
                             <param id="0" name="Name">&quot;TypeGame&quot;</param>
@@ -2089,7 +2097,7 @@
                         <action id="1" name="Post score" sid="981392406367946" type="TypeGame">
                             <param id="0" name="UserID">display_name</param>
                             <param id="1" name="Name">display_name</param>
-                            <param id="2" name="Score">time_typegame</param>
+                            <param id="2" name="Score">true</param>
                             <param id="3" name="Extra">&quot;&quot;</param>
                             <param id="4" name="Post condition">1</param>
                         </action>
@@ -2103,7 +2111,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="497714411452869" type="anwer_txt">
-                                    <param id="0" name="Unique ID">149</param>
+                                    <param id="0" name="Unique ID">242</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2120,7 +2128,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="138256621780348" type="anwer_txt">
-                                    <param id="0" name="Unique ID">150</param>
+                                    <param id="0" name="Unique ID">217</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2137,7 +2145,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="943398472495637" type="anwer_txt">
-                                    <param id="0" name="Unique ID">151</param>
+                                    <param id="0" name="Unique ID">218</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2154,7 +2162,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="416009545005839" type="anwer_txt">
-                                    <param id="0" name="Unique ID">152</param>
+                                    <param id="0" name="Unique ID">219</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2171,7 +2179,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="320633316071830" type="anwer_txt">
-                                    <param id="0" name="Unique ID">153</param>
+                                    <param id="0" name="Unique ID">220</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2188,7 +2196,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="992203869509473" type="anwer_txt">
-                                    <param id="0" name="Unique ID">154</param>
+                                    <param id="0" name="Unique ID">221</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2205,7 +2213,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="179666629031535" type="anwer_txt">
-                                    <param id="0" name="Unique ID">155</param>
+                                    <param id="0" name="Unique ID">222</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2222,7 +2230,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="178275371208713" type="anwer_txt">
-                                    <param id="0" name="Unique ID">156</param>
+                                    <param id="0" name="Unique ID">223</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2239,7 +2247,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="716539498173046" type="anwer_txt">
-                                    <param id="0" name="Unique ID">157</param>
+                                    <param id="0" name="Unique ID">224</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2256,7 +2264,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="147723256514328" type="anwer_txt">
-                                    <param id="0" name="Unique ID">158</param>
+                                    <param id="0" name="Unique ID">225</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2273,7 +2281,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="427185009308343" type="anwer_txt">
-                                    <param id="0" name="Unique ID">159</param>
+                                    <param id="0" name="Unique ID">226</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2290,7 +2298,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="113789498783516" type="anwer_txt">
-                                    <param id="0" name="Unique ID">160</param>
+                                    <param id="0" name="Unique ID">227</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2307,7 +2315,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="208200565723691" type="anwer_txt">
-                                    <param id="0" name="Unique ID">161</param>
+                                    <param id="0" name="Unique ID">228</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2324,7 +2332,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="994410692217003" type="anwer_txt">
-                                    <param id="0" name="Unique ID">162</param>
+                                    <param id="0" name="Unique ID">229</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2341,7 +2349,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="574781833626903" type="anwer_txt">
-                                    <param id="0" name="Unique ID">163</param>
+                                    <param id="0" name="Unique ID">230</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2358,7 +2366,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="684510446329899" type="anwer_txt">
-                                    <param id="0" name="Unique ID">164</param>
+                                    <param id="0" name="Unique ID">231</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2375,7 +2383,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="866334612708228" type="anwer_txt">
-                                    <param id="0" name="Unique ID">165</param>
+                                    <param id="0" name="Unique ID">232</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2392,7 +2400,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="381811098866950" type="anwer_txt">
-                                    <param id="0" name="Unique ID">166</param>
+                                    <param id="0" name="Unique ID">233</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2409,7 +2417,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="978829107560200" type="anwer_txt">
-                                    <param id="0" name="Unique ID">167</param>
+                                    <param id="0" name="Unique ID">234</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2426,7 +2434,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="801147731400824" type="anwer_txt">
-                                    <param id="0" name="Unique ID">168</param>
+                                    <param id="0" name="Unique ID">235</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2443,7 +2451,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="252584723757900" type="anwer_txt">
-                                    <param id="0" name="Unique ID">169</param>
+                                    <param id="0" name="Unique ID">236</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2460,7 +2468,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="338328245238180" type="anwer_txt">
-                                    <param id="0" name="Unique ID">170</param>
+                                    <param id="0" name="Unique ID">237</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2477,7 +2485,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="291289029501831" type="anwer_txt">
-                                    <param id="0" name="Unique ID">171</param>
+                                    <param id="0" name="Unique ID">238</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2494,7 +2502,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="422298048057433" type="anwer_txt">
-                                    <param id="0" name="Unique ID">172</param>
+                                    <param id="0" name="Unique ID">239</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2511,7 +2519,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="208099835017518" type="anwer_txt">
-                                    <param id="0" name="Unique ID">173</param>
+                                    <param id="0" name="Unique ID">240</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2528,7 +2536,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="483537579026814" type="anwer_txt">
-                                    <param id="0" name="Unique ID">174</param>
+                                    <param id="0" name="Unique ID">241</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -3035,6 +3043,11 @@
                         <condition id="0" name="On function" sid="530773304202273" type="Function">
                             <param id="0" name="Name">&quot;TypeGame&quot;</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="526623216351406" type="System">
+                            <param id="0" name="Variable">acheck_post</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="2" name="Set at X" sid="271673108031295" type="Type_array">
@@ -3043,11 +3056,15 @@
                         </action>
                         <action id="2" name="Set at X" sid="188279481652926" type="Type_array">
                             <param id="0" name="X">1</param>
-                            <param id="1" name="Value">time_typegame</param>
+                            <param id="1" name="Value">time2</param>
                         </action>
                         <action id="2" name="Set at X" sid="560705323446639" type="Type_array">
                             <param id="0" name="X">2</param>
                             <param id="1" name="Value">true</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="761183049099945" type="Type_array">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">email</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -3056,6 +3073,19 @@
                                 <condition id="-4" name="Trigger once while true" sid="214111589074652" type="System" />
                             </conditions>
                             <actions>
+                                <action id="1" name="Set value" sid="731292273343503" type="TypeGame_data">
+                                    <param id="0" name="Key">&quot;Email&quot;</param>
+                                    <param id="1" name="Value">Type_array.At(3)</param>
+                                </action>
+                                <action id="1" name="Set value" sid="629397914137914" type="TypeGame_data">
+                                    <param id="0" name="Key">&quot;Name&quot;</param>
+                                    <param id="1" name="Value">Type_array.At(0)</param>
+                                </action>
+                                <action id="4" name="Save" sid="690205575980638" type="TypeGame_data">
+                                    <param id="0" name="ID">&quot;Alphabet&quot;&amp;&quot;/&quot;&amp;display_name</param>
+                                    <param id="1" name="Set mode">0</param>
+                                    <param id="2" name="Tag">&quot;_&quot;</param>
+                                </action>
                                 <action id="1" name="Set value" sid="400050324440609" type="TypeGame_table">
                                     <param id="0" name="Key">&quot;score&quot;</param>
                                     <param id="1" name="Value">Type_array.At(1)</param>
@@ -3065,9 +3095,9 @@
                                     <param id="1" name="Value">Type_array.At(2)</param>
                                 </action>
                                 <action id="4" name="Save" sid="568593789383262" type="TypeGame_table">
-                                    <param id="0" name="ID">&quot;Alphabet&quot;&amp;&quot;/&quot;&amp;display_name&amp;&quot;/&quot;&amp;Date.Year &amp; &quot; &quot; &amp; Date.Month &amp; &quot; &quot; &amp; Date.Date&amp; &quot; &quot; &amp;Date.Hours &amp; &quot; : &quot; &amp; Date.Minutes &amp; &quot; : &quot; &amp; Date.Seconds</param>
+                                    <param id="0" name="ID">&quot;Alphabet&quot;&amp;&quot;/&quot;&amp;display_name&amp;&quot;/&quot;&amp;&quot;score&quot;&amp;&quot;/&quot;&amp;Date.Year &amp; &quot; &quot; &amp; Date.Month &amp; &quot; &quot; &amp; Date.Date&amp; &quot; &quot; &amp;Date.Hours &amp; &quot; : &quot; &amp; Date.Minutes &amp; &quot; : &quot; &amp; Date.Seconds</param>
                                     <param id="1" name="Set mode">0</param>
-                                    <param id="2" name="Tag">&quot;Type&quot;</param>
+                                    <param id="2" name="Tag">&quot;Type1&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3078,11 +3108,15 @@
         <event-block sid="439430133828171">
             <conditions>
                 <condition id="1" name="On save complete" sid="743620695916922" type="TypeGame_table">
-                    <param id="0" name="Tag">&quot;Type&quot;</param>
+                    <param id="0" name="Tag">&quot;Type1&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Clear" sid="693586893032125" type="Type_array" />
+                <action id="-9" name="Set value" sid="388435142255928" type="System">
+                    <param id="0" name="Variable">acheck_post</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

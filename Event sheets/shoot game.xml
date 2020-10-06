@@ -485,12 +485,29 @@
                             <param id="0" name="X">1</param>
                             <param id="1" name="Value">varScore</param>
                         </action>
+                        <action id="2" name="Set at X" sid="371895108211351" type="Shootgame_array">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">email</param>
+                        </action>
+                        <action id="1" name="Set value" sid="898592158353309" type="shootgame_data">
+                            <param id="0" name="Key">&quot;Email&quot;</param>
+                            <param id="1" name="Value">Shootgame_array.At(2)</param>
+                        </action>
+                        <action id="1" name="Set value" sid="362036191439500" type="shootgame_data">
+                            <param id="0" name="Key">&quot;Name&quot;</param>
+                            <param id="1" name="Value">Shootgame_array.At(0)</param>
+                        </action>
+                        <action id="4" name="Save" sid="315446717121993" type="shootgame_data">
+                            <param id="0" name="ID">&quot;ShootGame&quot;&amp;&quot;/&quot;&amp;display_name</param>
+                            <param id="1" name="Set mode">0</param>
+                            <param id="2" name="Tag">&quot;_&quot;</param>
+                        </action>
                         <action id="1" name="Set value" sid="404146198128152" type="shootgame_table">
                             <param id="0" name="Key">&quot;score&quot;</param>
                             <param id="1" name="Value">varScore</param>
                         </action>
                         <action id="4" name="Save" sid="965075307352085" type="shootgame_table">
-                            <param id="0" name="ID">&quot;ShootGame&quot;&amp;&quot;/&quot;&amp;display_name&amp;&quot;/&quot;&amp;Date.Year &amp; &quot; &quot; &amp; Date.Month &amp; &quot; &quot; &amp; Date.Date&amp; &quot; &quot; &amp;Date.Hours &amp; &quot; : &quot; &amp; Date.Minutes &amp; &quot; : &quot; &amp; Date.Seconds</param>
+                            <param id="0" name="ID">&quot;ShootGame&quot;&amp;&quot;/&quot;&amp;display_name&amp;&quot;/&quot;&amp;&quot;score&quot;&amp;&quot;/&quot;&amp;Date.Year &amp; &quot; &quot; &amp; Date.Month &amp; &quot; &quot; &amp; Date.Date&amp; &quot; &quot; &amp;Date.Hours &amp; &quot; : &quot; &amp; Date.Minutes &amp; &quot; : &quot; &amp; Date.Seconds</param>
                             <param id="1" name="Set mode">0</param>
                             <param id="2" name="Tag">&quot;shoot&quot;</param>
                         </action>

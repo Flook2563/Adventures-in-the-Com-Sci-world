@@ -470,7 +470,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>419</x>
+                        <x>427</x>
                         <y>158</y>
                         <z>0</z>
                         <width>310</width>
@@ -482,151 +482,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sub1" uid="859">
+                <instance type="SelectSubject" uid="887">
                     <properties>
+                        <items></items>
+                        <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <enabled>Yes</enabled>
+                        <type>Dropdown list</type>
+                        <multi-select>No</multi-select>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>271</x>
-                        <y>190</y>
+                        <x>299.5</x>
+                        <y>177</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>25</height>
+                        <width>255</width>
+                        <height>22</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sub2" uid="860">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>427</x>
-                        <y>190</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>25</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="sub3" uid="861">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>583</x>
-                        <y>190</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>25</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txt_sub1" uid="867">
-                    <properties>
-                        <text>Introduction to CS</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>271</x>
-                        <y>192</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>25</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txt_sub2" uid="868">
-                    <properties>
-                        <text>Network</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>427</x>
-                        <y>192</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>25</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txt_sub3" uid="869">
-                    <properties>
-                        <text>???</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>583</x>
-                        <y>192</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>25</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                     </world>
                 </instance>
             </instances>
@@ -655,6 +532,23 @@
                 <sub-domain>Subject</sub-domain>
             </properties>
         </instance>
+        <instance type="Load_Qu" uid="859" />
+        <instance type="Array_load" uid="860">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="1Qu" uid="861" />
+        <instance type="1C1" uid="867" />
+        <instance type="1C2" uid="868" />
+        <instance type="1C3" uid="869" />
+        <instance type="1C4" uid="882" />
+        <instance type="1ans" uid="884" />
+        <instance type="1time" uid="886" />
+        <instance type="1subject" uid="888" />
+        <instance type="1count" uid="889" />
     </nonworld-instances>
     <effects />
 </c2layout>

@@ -8,13 +8,16 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>1suqx80s5qurp</unique-id>
-    <saved-with-version>25900</saved-with-version>
+    <saved-with-version>26000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="PlayLive" id="JSON_plus_plus" version="1.110000014">JSON++</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Firebase" version="1">Firebase</plugin>
@@ -26,6 +29,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Valera Popov" id="ValerypopoffJSPlugin" version="1">ValerypopoffJS</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -49,7 +53,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Game</first-layout>
+    <first-layout>Login</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -62,7 +66,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -2451,6 +2455,74 @@
         <object-type global="1" name="Type_array" sid="780151408894640">
             <plugin id="Arr" />
         </object-type>
+        <object-type global="1" name="shootgame_data" sid="529724641776931">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type global="1" name="TypeGame_data" sid="150200336995152">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type global="1" name="Communication" sid="179037482835637">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type name="close_minigame2" sid="127474844422590">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648865473115201" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="close_txt_minigame2" sid="799780886769969">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="Select_subject" sid="260197860653496">
+            <plugin id="Rex_Firebase_ItemTable" />
+        </object-type>
+        <object-type name="AJAX" sid="422437178965110">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="JS" sid="203305774341639">
+            <plugin id="ValerypopoffJSPlugin" />
+        </object-type>
+        <object-type name="SelectSubject" sid="623544790487806">
+            <plugin id="List" />
+        </object-type>
+        <object-type global="1" name="Load_Qu" sid="966682315037478">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="Array_load" sid="499291257731936">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="1Qu" sid="117872351728364">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1C1" sid="708218877123827">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1C2" sid="621354440370476">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1C3" sid="256448070949951">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1C4" sid="269641703964562">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1ans" sid="359700072514644">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1time" sid="767165312436596">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1subject" sid="287355007387715">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1count" sid="909364025697408">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
+        <object-type global="1" name="1Quiz" sid="918443483696407">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families>
         <family name="box_ans" plugin-id="Sprite" sid="631846431795349">
@@ -2536,6 +2608,12 @@
         <global-instance type="Function" uid="38" />
         <global-instance type="Mouse" uid="108" />
         <global-instance type="Browser" uid="805" />
+        <global-instance type="AJAX" uid="883" />
+        <global-instance type="JS" uid="885">
+            <properties>
+                <script-files></script-files>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder>
         <file name="jump1.ogg" />
@@ -2576,5 +2654,7 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="quiz-game.json" />
+        <file name="class.json" />
     </files-folder>
 </c2project>

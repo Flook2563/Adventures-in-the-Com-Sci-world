@@ -66,18 +66,18 @@
         </event-block>
         <event-group description="" sid="288599052766364" title="แปลงเลข">
             <sub-events>
-                <event-block sid="812300711645744">
+                <event-block sid="363324820134564">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="658302531727446" type="System">
+                        <condition id="-14" name="Compare variable" sid="399459192377804" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">100</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="202351029938896" type="System">
+                        <action id="-9" name="Set value" sid="845370721135645" type="System">
                             <param id="0" name="Variable">frame_shoot</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -86,16 +86,36 @@
                         <condition id="-14" name="Compare variable" sid="471471137926557" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">101</param>
+                            <param id="2" name="Value">5</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="391346935601816" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">200</param>
+                            <param id="2" name="Value">10</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="253347301497178" type="System">
+                            <param id="0" name="Variable">frame_shoot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="731713380318173">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="617084278734687" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="546117143081056" type="System">
+                            <param id="0" name="Variable">score_shoot</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="553834586948397" type="System">
                             <param id="0" name="Variable">frame_shoot</param>
                             <param id="1" name="Value">2</param>
                         </action>
@@ -106,12 +126,12 @@
                         <condition id="-14" name="Compare variable" sid="721562654370690" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">201</param>
+                            <param id="2" name="Value">16</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="619211814518412" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">300</param>
+                            <param id="2" name="Value">20</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -126,12 +146,12 @@
                         <condition id="-14" name="Compare variable" sid="534934878774393" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">301</param>
+                            <param id="2" name="Value">21</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="315444786177799" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">400</param>
+                            <param id="2" name="Value">25</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -146,12 +166,12 @@
                         <condition id="-14" name="Compare variable" sid="469820751175542" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">401</param>
+                            <param id="2" name="Value">26</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="397754453680493" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">500</param>
+                            <param id="2" name="Value">30</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -166,12 +186,12 @@
                         <condition id="-14" name="Compare variable" sid="165816497951232" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">501</param>
+                            <param id="2" name="Value">31</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="996496300409967" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">600</param>
+                            <param id="2" name="Value">35</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -186,12 +206,12 @@
                         <condition id="-14" name="Compare variable" sid="201132974799427" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">601</param>
+                            <param id="2" name="Value">36</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="247966764054978" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">700</param>
+                            <param id="2" name="Value">40</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -206,12 +226,12 @@
                         <condition id="-14" name="Compare variable" sid="818532875954162" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">701</param>
+                            <param id="2" name="Value">41</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="266365926689009" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">800</param>
+                            <param id="2" name="Value">45</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -226,12 +246,12 @@
                         <condition id="-14" name="Compare variable" sid="710482382449604" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">801</param>
+                            <param id="2" name="Value">46</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="711208856387342" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">900</param>
+                            <param id="2" name="Value">50</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -246,12 +266,12 @@
                         <condition id="-14" name="Compare variable" sid="708102677758508" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">901</param>
+                            <param id="2" name="Value">51</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="745549961841368" type="System">
                             <param id="0" name="Variable">score_shoot</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">1000</param>
+                            <param id="2" name="Value">55</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -285,12 +305,12 @@
                         <condition id="-14" name="Compare variable" sid="481682959500121" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">5</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="218449430437801" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">4</param>
+                            <param id="2" name="Value">15</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -305,12 +325,12 @@
                         <condition id="-14" name="Compare variable" sid="127320947612329" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">5</param>
+                            <param id="2" name="Value">16</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="583376102122436" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">10</param>
+                            <param id="2" name="Value">25</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -325,12 +345,12 @@
                         <condition id="-14" name="Compare variable" sid="811321629922677" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">11</param>
+                            <param id="2" name="Value">26</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="337904835539413" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">15</param>
+                            <param id="2" name="Value">35</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -345,12 +365,12 @@
                         <condition id="-14" name="Compare variable" sid="807096311537917" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">16</param>
+                            <param id="2" name="Value">36</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="914162637706961" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">20</param>
+                            <param id="2" name="Value">45</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -365,12 +385,12 @@
                         <condition id="-14" name="Compare variable" sid="879725674277634" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">21</param>
+                            <param id="2" name="Value">46</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="305558634663455" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">25</param>
+                            <param id="2" name="Value">55</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -385,12 +405,12 @@
                         <condition id="-14" name="Compare variable" sid="754864707178502" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">26</param>
+                            <param id="2" name="Value">56</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="967760583356474" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">30</param>
+                            <param id="2" name="Value">65</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -405,12 +425,12 @@
                         <condition id="-14" name="Compare variable" sid="468951828833354" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">31</param>
+                            <param id="2" name="Value">66</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="422029264221238" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">35</param>
+                            <param id="2" name="Value">75</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -425,12 +445,12 @@
                         <condition id="-14" name="Compare variable" sid="624861431064303" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">36</param>
+                            <param id="2" name="Value">76</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="801651657978793" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">40</param>
+                            <param id="2" name="Value">85</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -445,12 +465,12 @@
                         <condition id="-14" name="Compare variable" sid="957497591909218" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">41</param>
+                            <param id="2" name="Value">86</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="587908533605628" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">45</param>
+                            <param id="2" name="Value">95</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -465,7 +485,7 @@
                         <condition id="-14" name="Compare variable" sid="245149610293156" type="System">
                             <param id="0" name="Variable">score_adx</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">46</param>
+                            <param id="2" name="Value">96</param>
                         </condition>
                     </conditions>
                     <actions>

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Minigame 2</name>
     <events>
+        <variable constant="0" name="count_commu" sid="286042883893536" static="0" type="text"></variable>
         <include>LV1</include>
         <variable constant="0" name="Answer" sid="742140813779579" static="0" type="text"></variable>
         <event-block sid="321604023242072">
@@ -18,316 +19,252 @@
                     <param id="0" name="Instance variable">select</param>
                     <param id="1" name="Value">2</param>
                 </action>
-                <action id="-9" name="Set value" sid="377266091247293" type="System">
-                    <param id="0" name="Variable">select_sub</param>
-                    <param id="1" name="Value">Select_s</param>
+                <action id="-9" name="Set value" sid="106298475225376" type="System">
+                    <param id="0" name="Variable">Count_Quiz</param>
+                    <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;.json&quot;</param>
+                </action>
+                <action id="0" name="Load JSON" sid="153017159312433" type="1count">
+                    <param id="0" name="Tag">&quot;count&quot;</param>
+                    <param id="1" name="URL">Count_Quiz</param>
+                    <param id="2" name="POST">&quot;&quot;</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="743248157306847">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="541978305050100" type="System">
-                            <param id="0" name="Variable">select_sub</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;introtocs&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="13" name="Load all" sid="173417127247282" type="IntoToCS">
-                            <param id="0" name="Tag">&quot;dataUse&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="323496874953607">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="283400162062504" type="System">
-                            <param id="0" name="Variable">select_sub</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;network&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="13" name="Load all" sid="291221262219335" type="Network">
-                            <param id="0" name="Tag">&quot;dataUse&quot;</param>
-                        </action>
-                    </actions>
+                <event-block sid="339155009555555">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="180601556094674" title="LoadQuestion2">
+        <event-group description="" sid="432664637390482" title="Load2">
             <sub-events>
-                <event-block sid="247271872418589">
+                <event-block sid="456111758325324">
                     <conditions>
-                        <condition id="0" name="On function" sid="558276505216474" type="Function">
-                            <param id="0" name="Name">&quot;Random&quot;</param>
+                        <condition id="0" name="On completed" sid="522207136524814" type="1count">
+                            <param id="0" name="Tag">&quot;count&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="682608102223531" type="System">
-                            <param id="0" name="Variable">count_intro</param>
-                            <param id="1" name="Value">IntoToCS.ItemsCount</param>
+                        <action id="2" name="Set at X" sid="232490058670900" type="1Quiz">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">1count.GetSize</param>
                         </action>
-                        <action id="-9" name="Set value" sid="635800259149927" type="System">
-                            <param id="0" name="Variable">count_network</param>
-                            <param id="1" name="Value">Network.ItemsCount</param>
+                        <action id="-9" name="Set value" sid="624749371255554" type="System">
+                            <param id="0" name="Variable">randomCol</param>
+                            <param id="1" name="Value">int(random(1,int(1Quiz.At(0))))</param>
                         </action>
-                        <action id="-9" name="Set value" sid="411472068295490" type="System">
-                            <param id="0" name="Variable">Number_check</param>
-                            <param id="1" name="Value">count_intro+count_network</param>
+                        <action id="-9" name="Set value" sid="838250727038519" type="System">
+                            <param id="0" name="Variable">Number</param>
+                            <param id="1" name="Value">&quot;NO&quot;&amp;randomCol</param>
                         </action>
-                        <action id="-9" name="Set value" sid="258719034281502" type="System">
-                            <param id="0" name="Variable">Number_random</param>
-                            <param id="1" name="Value">int(random(1,Number_check))</param>
+                        <action id="-9" name="Set value" sid="134486951636233" type="System">
+                            <param id="0" name="Variable">Qu_Load</param>
+                            <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;/&quot;&amp;Number&amp;&quot;/Qu.json&quot;</param>
+                        </action>
+                        <action id="0" name="Load JSON" sid="178564223091762" type="1Qu">
+                            <param id="0" name="Tag">&quot;Qu&quot;</param>
+                            <param id="1" name="URL">Qu_Load</param>
+                            <param id="2" name="POST">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="945786105428975" type="System">
+                            <param id="0" name="Variable">C1_Load</param>
+                            <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;/&quot;&amp;Number&amp;&quot;/C1.json&quot;</param>
+                        </action>
+                        <action id="0" name="Load JSON" sid="678189969031771" type="1C1">
+                            <param id="0" name="Tag">&quot;C1&quot;</param>
+                            <param id="1" name="URL">C1_Load</param>
+                            <param id="2" name="POST">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="936653711452233" type="System">
+                            <param id="0" name="Variable">C2_Load</param>
+                            <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;/&quot;&amp;Number&amp;&quot;/C2.json&quot;</param>
+                        </action>
+                        <action id="0" name="Load JSON" sid="676430317709883" type="1C2">
+                            <param id="0" name="Tag">&quot;C2&quot;</param>
+                            <param id="1" name="URL">C2_Load</param>
+                            <param id="2" name="POST">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="912959860699292" type="System">
+                            <param id="0" name="Variable">C3_Load</param>
+                            <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;/&quot;&amp;Number&amp;&quot;/C3.json&quot;</param>
+                        </action>
+                        <action id="0" name="Load JSON" sid="788517660068270" type="1C3">
+                            <param id="0" name="Tag">&quot;C3&quot;</param>
+                            <param id="1" name="URL">C3_Load</param>
+                            <param id="2" name="POST">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="745881505162490" type="System">
+                            <param id="0" name="Variable">C4_Load</param>
+                            <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;/&quot;&amp;Number&amp;&quot;/C4.json&quot;</param>
+                        </action>
+                        <action id="0" name="Load JSON" sid="636155528140191" type="1C4">
+                            <param id="0" name="Tag">&quot;C4&quot;</param>
+                            <param id="1" name="URL">C4_Load</param>
+                            <param id="2" name="POST">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="696870367030124" type="System">
+                            <param id="0" name="Variable">ans_Load</param>
+                            <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;/&quot;&amp;Number&amp;&quot;/ans.json&quot;</param>
+                        </action>
+                        <action id="0" name="Load JSON" sid="575264970699603" type="1ans">
+                            <param id="0" name="Tag">&quot;ans&quot;</param>
+                            <param id="1" name="URL">ans_Load</param>
+                            <param id="2" name="POST">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="328317681707788" type="System">
+                            <param id="0" name="Variable">Time_Load</param>
+                            <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;/&quot;&amp;Number&amp;&quot;/Time.json&quot;</param>
+                        </action>
+                        <action id="0" name="Load JSON" sid="396487220877769" type="1time">
+                            <param id="0" name="Tag">&quot;time&quot;</param>
+                            <param id="1" name="URL">Time_Load</param>
+                            <param id="2" name="POST">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="924154203430021" type="System">
+                            <param id="0" name="Variable">Subject_Load</param>
+                            <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class/&quot;&amp;Select_s&amp;&quot;/&quot;&amp;Number&amp;&quot;/subject.json&quot;</param>
+                        </action>
+                        <action id="0" name="Load JSON" sid="342859630693205" type="1subject">
+                            <param id="0" name="Tag">&quot;subject&quot;</param>
+                            <param id="1" name="URL">Subject_Load</param>
+                            <param id="2" name="POST">&quot;&quot;</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="166834319091245">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="692005357620177" type="System">
-                                    <param id="0" name="Variable">select_sub</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;introtocs&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="657606439659626" type="System">
-                                    <param id="0" name="Variable">randomCol</param>
-                                    <param id="1" name="Value">int(random(1,count_intro))</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="731887322279672" type="System">
-                                    <param id="0" name="Variable">Number</param>
-                                    <param id="1" name="Value">&quot;NO&quot;&amp;randomCol</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="564658218151954">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="963257604198266" type="System">
-                                            <param id="0" name="Variable">Number</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;NO0&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="466206194282726" type="System">
-                                            <param id="0" name="Variable">Number</param>
-                                            <param id="1" name="Value">&quot;NO&quot;&amp;int(random(1,Number_check))</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="845065700556608">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="590639503397205" type="System">
-                                    <param id="0" name="Variable">select_sub</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;network&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="135196045644862" type="System">
-                                    <param id="0" name="Variable">randomCol</param>
-                                    <param id="1" name="Value">int(random(1,count_network))</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="347886222802698" type="System">
-                                    <param id="0" name="Variable">Number</param>
-                                    <param id="1" name="Value">&quot;NO&quot;&amp;randomCol</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="953586958964261">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="401015777968852" type="System">
-                                    <param id="0" name="Variable">Number</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;NO0&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="247396787385504" type="System">
-                                    <param id="0" name="Variable">Number</param>
-                                    <param id="1" name="Value">&quot;NO&quot;&amp;int(random(1,Number_check))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
-                <event-block sid="939851490019198">
+                <event-block sid="575226012454172">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="159323479200189" type="System">
-                            <param id="0" name="Variable">select_sub</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;introtocs&quot;</param>
+                        <condition id="0" name="On completed" sid="197658237647489" type="1Qu">
+                            <param id="0" name="Tag">&quot;Qu&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="394933417218704">
-                            <conditions>
-                                <condition id="11" name="On load complete" sid="151806844559479" type="IntoToCS">
-                                    <param id="0" name="Tag">&quot;dataUse&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="336082553252350" type="Function">
-                                    <param id="0" name="Name">&quot;Random&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="2" name="Set at X" sid="362572341893318" type="QuizArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;Qu&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="266936278536210" type="QuizArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;C1&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="179664583242547" type="QuizArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;C2&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="626975031187988" type="QuizArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;C3&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="385001993592935" type="QuizArray">
-                                    <param id="0" name="X">4</param>
-                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;C4&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="221228283736841" type="QuizArray">
-                                    <param id="0" name="X">5</param>
-                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;ans&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="657997990847099" type="QuizArray">
-                                    <param id="0" name="X">6</param>
-                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;Time&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="470974135679843" type="QuizArray">
-                                    <param id="0" name="X">7</param>
-                                    <param id="1" name="Value">IntoToCS.At(Number,&quot;subject&quot;)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="350128113346576" type="topictext">
-                                    <param id="0" name="Text">QuizArray.At(0)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="454634230175594" type="c1text">
-                                    <param id="0" name="Text">QuizArray.At(1)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="151802503530476" type="c2text">
-                                    <param id="0" name="Text">QuizArray.At(2)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="615810792078098" type="c3text">
-                                    <param id="0" name="Text">QuizArray.At(3)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="451646824562299" type="c4text">
-                                    <param id="0" name="Text">QuizArray.At(4)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="448526615699522" type="System">
-                                    <param id="0" name="Variable">minigame_answer</param>
-                                    <param id="1" name="Value">QuizArray.At(5)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="317364356531412" type="System">
-                                    <param id="0" name="Variable">zoombie_time</param>
-                                    <param id="1" name="Value">QuizArray.At(6)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="647329898992072" type="System">
-                                    <param id="0" name="Variable">count_ans</param>
-                                    <param id="1" name="Value">len(minigame_answer)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="810651058140049" type="System">
-                                    <param id="0" name="Variable">Load_subject</param>
-                                    <param id="1" name="Value">QuizArray.At(7)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="2" name="Set at X" sid="379437056880427" type="1Quiz">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">replace(1Qu.GetValue,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                    </actions>
                 </event-block>
-                <event-block sid="321860361106052">
+                <event-block sid="444433805335935">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="919501316275816" type="System">
-                            <param id="0" name="Variable">select_sub</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;network&quot;</param>
+                        <condition id="0" name="On completed" sid="483630607890730" type="1C1">
+                            <param id="0" name="Tag">&quot;C1&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="792069911744791">
-                            <conditions>
-                                <condition id="11" name="On load complete" sid="960491437476946" type="Network">
-                                    <param id="0" name="Tag">&quot;dataUse&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="474999612119786" type="Function">
-                                    <param id="0" name="Name">&quot;Random&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="2" name="Set at X" sid="350656235598039" type="QuizArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Value">Network.At(Number,&quot;Qu&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="820982396598703" type="QuizArray">
-                                    <param id="0" name="X">1</param>
-                                    <param id="1" name="Value">Network.At(Number,&quot;C1&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="646482235452318" type="QuizArray">
-                                    <param id="0" name="X">2</param>
-                                    <param id="1" name="Value">Network.At(Number,&quot;C2&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="514425281797549" type="QuizArray">
-                                    <param id="0" name="X">3</param>
-                                    <param id="1" name="Value">Network.At(Number,&quot;C3&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="985494705036066" type="QuizArray">
-                                    <param id="0" name="X">4</param>
-                                    <param id="1" name="Value">Network.At(Number,&quot;C4&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="502966892834563" type="QuizArray">
-                                    <param id="0" name="X">5</param>
-                                    <param id="1" name="Value">Network.At(Number,&quot;ans&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="267712645862894" type="QuizArray">
-                                    <param id="0" name="X">6</param>
-                                    <param id="1" name="Value">Network.At(Number,&quot;Time&quot;)</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="116786905764883" type="QuizArray">
-                                    <param id="0" name="X">7</param>
-                                    <param id="1" name="Value">Network.At(Number,&quot;subject&quot;)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="471179570828170" type="topictext">
-                                    <param id="0" name="Text">QuizArray.At(0)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="597869366298040" type="c1text">
-                                    <param id="0" name="Text">QuizArray.At(1)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="701131895360398" type="c2text">
-                                    <param id="0" name="Text">QuizArray.At(2)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="916241943483102" type="c3text">
-                                    <param id="0" name="Text">QuizArray.At(3)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="865492475348909" type="c4text">
-                                    <param id="0" name="Text">QuizArray.At(4)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="240055190400733" type="System">
-                                    <param id="0" name="Variable">minigame_answer</param>
-                                    <param id="1" name="Value">QuizArray.At(5)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="907303728218850" type="System">
-                                    <param id="0" name="Variable">zoombie_time</param>
-                                    <param id="1" name="Value">QuizArray.At(6)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="786742885140378" type="System">
-                                    <param id="0" name="Variable">count_ans</param>
-                                    <param id="1" name="Value">len(minigame_answer)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="321400137261522" type="System">
-                                    <param id="0" name="Variable">Load_subject</param>
-                                    <param id="1" name="Value">QuizArray.At(7)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="2" name="Set at X" sid="145174846582704" type="1Quiz">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">replace(1C1.GetValue,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="434262666269305">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="790180555464702" type="1C2">
+                            <param id="0" name="Tag">&quot;C2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="533886361502270" type="1Quiz">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">replace(1C2.GetValue,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="491021124050946">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="872963953154628" type="1C3">
+                            <param id="0" name="Tag">&quot;C3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="522763409423397" type="1Quiz">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">replace(1C3.GetValue,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="818882687940598">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="887745383984205" type="1C4">
+                            <param id="0" name="Tag">&quot;C4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="264147181176797" type="1Quiz">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">replace(1C4.GetValue,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="199204035144870">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="465599192106551" type="1ans">
+                            <param id="0" name="Tag">&quot;ans&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="481321967064484" type="1Quiz">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">replace(1ans.GetValue,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="634736714664183">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="165090996712951" type="1time">
+                            <param id="0" name="Tag">&quot;time&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="806330767691008" type="1Quiz">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">1time.GetValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="536301203272330">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="438587215149110" type="1subject">
+                            <param id="0" name="Tag">&quot;subject&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="143630371251663" type="1Quiz">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">replace(1subject.GetValue,&quot;&quot;&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="680612486964839" type="topictext">
+                            <param id="0" name="Text">1Quiz.At(1)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="376443625637783" type="c1text">
+                            <param id="0" name="Text">1Quiz.At(2)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="428433815074037" type="c2text">
+                            <param id="0" name="Text">1Quiz.At(3)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="718253904230399" type="c3text">
+                            <param id="0" name="Text">1Quiz.At(4)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="668542777707720" type="c4text">
+                            <param id="0" name="Text">1Quiz.At(5)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="284186644363765" type="System">
+                            <param id="0" name="Variable">minigame_answer</param>
+                            <param id="1" name="Value">1Quiz.At(6)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="561803352321361" type="System">
+                            <param id="0" name="Variable">zoombie_time</param>
+                            <param id="1" name="Value">1Quiz.At(7)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446291679425018" type="System">
+                            <param id="0" name="Variable">count_ans</param>
+                            <param id="1" name="Value">len(minigame_answer)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="950048128779005" type="System">
+                            <param id="0" name="Variable">Load_subject</param>
+                            <param id="1" name="Value">1Quiz.At(8)</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1258,7 +1195,7 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="752479240989601" type="System">
                                             <param id="0" name="Variable">Answer</param>
-                                            <param id="1" name="Value">QuizArray.At(1)</param>
+                                            <param id="1" name="Value">1Quiz.At(2)</param>
                                         </action>
                                         <action id="0" name="Call function" sid="861937832353998" type="Function">
                                             <param id="0" name="Name">&quot;compare&quot;</param>
@@ -1287,7 +1224,7 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="594725148150079" type="System">
                                             <param id="0" name="Variable">Answer</param>
-                                            <param id="1" name="Value">QuizArray.At(2)</param>
+                                            <param id="1" name="Value">1Quiz.At(3)</param>
                                         </action>
                                         <action id="0" name="Call function" sid="925770828164269" type="Function">
                                             <param id="0" name="Name">&quot;compare&quot;</param>
@@ -1316,7 +1253,7 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="506136833111006" type="System">
                                             <param id="0" name="Variable">Answer</param>
-                                            <param id="1" name="Value">QuizArray.At(3)</param>
+                                            <param id="1" name="Value">1Quiz.At(4)</param>
                                         </action>
                                         <action id="0" name="Call function" sid="401296394453962" type="Function">
                                             <param id="0" name="Name">&quot;compare&quot;</param>
@@ -1345,7 +1282,7 @@
                                         </action>
                                         <action id="-9" name="Set value" sid="328136893458979" type="System">
                                             <param id="0" name="Variable">Answer</param>
-                                            <param id="1" name="Value">QuizArray.At(4)</param>
+                                            <param id="1" name="Value">1Quiz.At(5)</param>
                                         </action>
                                         <action id="0" name="Call function" sid="265966416264691" type="Function">
                                             <param id="0" name="Name">&quot;compare&quot;</param>
@@ -1374,7 +1311,7 @@
                                 <condition id="-14" name="Compare variable" sid="123387682036208" type="System">
                                     <param id="0" name="Variable">Answer</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">QuizArray.At(5)</param>
+                                    <param id="2" name="Value">1Quiz.At(6)</param>
                                 </condition>
                             </conditions>
                             <actions>

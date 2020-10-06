@@ -3,15 +3,36 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Setting</name>
     <events>
-        <variable constant="0" name="Select_s" sid="517508309284988" static="0" type="text">introtocs</variable>
+        <variable constant="0" name="Size_Subject" sid="836113665948984" static="0" type="number">0</variable>
+        <variable constant="0" name="Select_s" sid="517508309284988" static="0" type="text">Network</variable>
         <variable constant="0" name="sound" sid="545203470450424" static="0" type="number">-10</variable>
         <variable constant="0" name="sound_count" sid="176722220001333" static="0" type="number">5</variable>
+        <variable constant="0" name="Load_Qu" sid="234546722415607" static="0" type="text"></variable>
+        <variable constant="0" name="count_Qu" sid="326727838417064" static="0" type="number">0</variable>
+        <variable constant="0" name="Count_Load" sid="829620666266528" static="0" type="text"></variable>
+        <variable constant="0" name="Qu_Load" sid="895058322978997" static="0" type="text"></variable>
+        <variable constant="0" name="C1_Load" sid="404388896774018" static="0" type="text"></variable>
+        <variable constant="0" name="C2_Load" sid="748476425574160" static="0" type="text"></variable>
+        <variable constant="0" name="C3_Load" sid="994479932190855" static="0" type="text"></variable>
+        <variable constant="0" name="C4_Load" sid="958911090499517" static="0" type="text"></variable>
+        <variable constant="0" name="Time_Load" sid="385139246784749" static="0" type="text"></variable>
+        <variable constant="0" name="ans_Load" sid="638348934364176" static="0" type="text"></variable>
+        <variable constant="0" name="Subject_Load" sid="622043067751119" static="0" type="text"></variable>
         <event-block sid="880565324126641">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="100097211371086" type="System" />
             </conditions>
             <actions>
                 <action id="62" name="Go online" sid="280386950199085" type="Firebase" />
+                <action id="-9" name="Set value" sid="196055123617480" type="System">
+                    <param id="0" name="Variable">Load_Qu</param>
+                    <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class.json&quot;</param>
+                </action>
+                <action id="0" name="Load JSON" sid="302118061908567" type="Load_Qu">
+                    <param id="0" name="Tag">&quot;post&quot;</param>
+                    <param id="1" name="URL">Load_Qu</param>
+                    <param id="2" name="POST">&quot;&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="757586806982225">
@@ -19,26 +40,12 @@
                         <condition id="-14" name="Compare variable" sid="996435699746105" type="System">
                             <param id="0" name="Variable">Select_s</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;introtocs&quot;</param>
+                            <param id="2" name="Value">Select_s</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="721579810527967" type="status_sub">
-                            <param id="0" name="Text">&quot;Subject : Introduction to CS&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="791780701852499">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="935306657677701" type="System">
-                            <param id="0" name="Variable">Select_s</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;network&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="815477363517351" type="status_sub">
-                            <param id="0" name="Text">&quot;Subject : Network&quot;</param>
+                        <action id="0" name="Set text" sid="938289163041229" type="status_sub">
+                            <param id="0" name="Text">&quot;Subject : &quot;&amp;Select_s</param>
                         </action>
                     </actions>
                 </event-block>
@@ -204,119 +211,60 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="318815447851805" title="Subject">
-            <sub-events>
-                <event-block sid="286082816710589">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="431844691973905" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">sub1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="572606921534609" type="status_sub">
-                            <param id="0" name="Text">&quot;Subject : Introduction to CS&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="282318511216975" type="System">
-                            <param id="0" name="Variable">Select_s</param>
-                            <param id="1" name="Value">&quot;introtocs&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="853339352625646">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="570246363606951" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="607110446464555" type="Audio">
-                                    <param id="0" name="Audio file">menu_click</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">sound</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="925762790330161">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="306847981663892" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">sub2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="882700384553969" type="status_sub">
-                            <param id="0" name="Text">&quot;Subject : Network&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="590865064501315" type="System">
-                            <param id="0" name="Variable">Select_s</param>
-                            <param id="1" name="Value">&quot;network&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="980697302968620">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="972557670748904" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="229046777277126" type="Audio">
-                                    <param id="0" name="Audio file">menu_click</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">sound</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="772328570493567">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="807700471913067" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">sub3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="387771340160880" type="status_sub">
-                            <param id="0" name="Text">&quot;Subject : ยังไม่มี&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="635015041408092" type="Function">
-                            <param id="0" name="Name">&quot;path&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="752769610630601">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="829330270747853" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="352069663188845" type="Audio">
-                                    <param id="0" name="Audio file">menu_click</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">sound</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="850587635019909">
+        <event-block sid="497199881457107">
             <conditions>
-                <condition id="0" name="On function" sid="995489594282657" type="Function">
-                    <param id="0" name="Name">&quot;path&quot;</param>
+                <condition id="0" name="On completed" sid="717192662443486" type="Load_Qu">
+                    <param id="0" name="Tag">&quot;post&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Set at X" sid="390681695347983" type="test">
-                    <param id="0" name="X">0</param>
-                    <param id="1" name="Value">&quot;Flook&quot;</param>
+                <action id="-9" name="Set value" sid="832418988661991" type="System">
+                    <param id="0" name="Variable">Size_Subject</param>
+                    <param id="1" name="Value">int(Load_Qu.GetSize)</param>
+                </action>
+                <action id="-9" name="Set value" sid="531769535211814" type="System">
+                    <param id="0" name="Variable">count_Qu</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="528478330564384">
+            <conditions>
+                <condition id="-23" name="While" sid="805409542244376" type="System" />
+                <condition id="-14" name="Compare variable" sid="867332661792520" type="System">
+                    <param id="0" name="Variable">count_Qu</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">Size_Subject</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Set at X" sid="444249812553547" type="Array_load">
+                    <param id="0" name="X">count_Qu</param>
+                    <param id="1" name="Value">Load_Qu.GetKeyName(count_Qu)</param>
+                </action>
+                <action id="7" name="Add item" sid="301704657777194" type="SelectSubject">
+                    <param id="0" name="Text">Array_load.At(count_Qu)</param>
+                </action>
+                <action id="-10" name="Add to" sid="934140430070286" type="System">
+                    <param id="0" name="Variable">count_Qu</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="185829364665802">
+            <conditions>
+                <condition id="0" name="Compare selection" sid="528966962766904" type="SelectSubject">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Index">SelectSubject.SelectedIndex</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="567716961149886" type="System">
+                    <param id="0" name="Variable">Select_s</param>
+                    <param id="1" name="Value">SelectSubject.ItemTextAt(SelectSubject.SelectedIndex)</param>
+                </action>
+                <action id="0" name="Set text" sid="109859401903639" type="status_sub">
+                    <param id="0" name="Text">&quot;Subject : &quot;&amp;Select_s</param>
                 </action>
             </actions>
         </event-block>
