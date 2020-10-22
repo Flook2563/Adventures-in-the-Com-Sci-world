@@ -1332,7 +1332,7 @@
         <object-type name="txt_ans1" sid="763779478859667">
             <plugin id="Text" />
         </object-type>
-        <object-type name="txt_normal" sid="205302186680817">
+        <object-type name="txt_Normal" sid="205302186680817">
             <plugin id="Text" />
         </object-type>
         <object-type name="txt_fast" sid="226391427938361">
@@ -2292,7 +2292,14 @@
                     <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\3.png" />
                     <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\4.png" />
                     <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\5.png" />
-                    <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\6.png" />
+                    <frame duration="1" hotspotX="0.491468" hotspotY="0.509091" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\6.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\7.png" />
                     <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\8.png" />
                     <frame duration="1" hotspotX="0.489761" hotspotY="0.490909" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\Adventures in the Com-Sci world\ไฟล์รูป\stats\9.png" />
@@ -2523,6 +2530,68 @@
         <object-type global="1" name="1Quiz" sid="918443483696407">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="btn_mode_fast2" sid="666484796009380">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="392516705478147" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_mode_fast\Default\000.png">
+                        <collision-poly>
+                            <point x="0.00666667" y="0.0333333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993333" y="0.0333333" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_mode_fast3" sid="839550095870248">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="287499093377224" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_mode_fast\Default\000.png">
+                        <collision-poly>
+                            <point x="0.00666667" y="0.0333333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993333" y="0.0333333" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_slow" sid="812887252177405">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btn_mode_normal2" sid="193453517653215">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="718887631070811" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\flook\OneDrive\เดสก์ท็อป\az\Animations\btn_mode_normal\Default\000.png">
+                        <collision-poly>
+                            <point x="0.00666667" y="0.0333333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993333" y="0.0333333" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="625884044979683">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="378007368893615" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="check_ans" sid="956590316915115">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="box_ans" plugin-id="Sprite" sid="631846431795349">
@@ -2559,7 +2628,9 @@
         <layout>Minigame LV4 2.xml</layout>
         <layout>Minigame LV5 2.xml</layout>
         <layout>shoot game.xml</layout>
+        <layout>shoot game fast.xml</layout>
         <layout>Type the Alphabet.xml</layout>
+        <layout>Type the Alphabet - nor.xml</layout>
         <layout>Type the Alphabet - slow.xml</layout>
     </layout-folder>
     <event-folder>
@@ -2570,7 +2641,7 @@
         <event-sheet>Game.xml</event-sheet>
         <event-sheet>shoot game.xml</event-sheet>
         <event-sheet>Type the Alphabet.xml</event-sheet>
-        <event-sheet>Type the Alphabet - slow.xml</event-sheet>
+        <event-sheet>Type the Alphabet - nor.xml</event-sheet>
         <event-sheet>LV4.xml</event-sheet>
         <event-sheet>LV3.xml</event-sheet>
         <event-sheet>Minigame LV2 1.xml</event-sheet>
@@ -2588,6 +2659,9 @@
         <event-sheet>Leaderboard.xml</event-sheet>
         <event-sheet>Setting.xml</event-sheet>
         <event-sheet>Overview.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Type the Alphabet - slow.xml</event-sheet>
+        <event-sheet>shoot game fast.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
@@ -2643,6 +2717,7 @@
         <file name="songa-z.ogg" />
         <file name="menu_click.ogg" />
         <file name="why_did_you_do_it.ogg" />
+        <file name="slowogg.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

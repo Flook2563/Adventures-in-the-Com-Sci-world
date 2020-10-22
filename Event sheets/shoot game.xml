@@ -10,6 +10,10 @@
                 <condition id="-2" name="On start of layout" sid="666421405886427" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="263156269053305" type="System">
+                    <param id="0" name="Variable">varScore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="433872561437534" type="spritefont" />
                 <action id="11" name="Load" sid="450979332048089" type="ArrayLetters">
                     <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[26,1,1],&quot;&quot;data&quot;&quot;:[[[&quot;&quot;A&quot;&quot;]],[[&quot;&quot;B&quot;&quot;]],[[&quot;&quot;C&quot;&quot;]],[[&quot;&quot;D&quot;&quot;]],[[&quot;&quot;E&quot;&quot;]],[[&quot;&quot;F&quot;&quot;]],[[&quot;&quot;G&quot;&quot;]],[[&quot;&quot;H&quot;&quot;]],[[&quot;&quot;I&quot;&quot;]],[[&quot;&quot;J&quot;&quot;]],[[&quot;&quot;K&quot;&quot;]],[[&quot;&quot;L&quot;&quot;]],[[&quot;&quot;M&quot;&quot;]],[[&quot;&quot;N&quot;&quot;]],[[&quot;&quot;O&quot;&quot;]],[[&quot;&quot;P&quot;&quot;]],[[&quot;&quot;Q&quot;&quot;]],[[&quot;&quot;R&quot;&quot;]],[[&quot;&quot;S&quot;&quot;]],[[&quot;&quot;T&quot;&quot;]],[[&quot;&quot;U&quot;&quot;]],[[&quot;&quot;V&quot;&quot;]],[[&quot;&quot;W&quot;&quot;]],[[&quot;&quot;X&quot;&quot;]],[[&quot;&quot;Y&quot;&quot;]],[[&quot;&quot;Z&quot;&quot;]]]}&quot;</param>
@@ -122,7 +126,7 @@
                             <param id="0" name="Frame number">ArrayLetters.IndexOf(uppercase(mid(txtWord.Text,loopindex,1)))</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="323195468428497" type="spritefont">
-                            <param id="0" name="Speed">random(70,110)</param>
+                            <param id="0" name="Speed">50</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="491161555329035" type="spritefont">
                             <param id="0" name="Angle">90</param>
@@ -544,6 +548,64 @@
             <actions>
                 <action id="0" name="Clear" sid="367442110244831" type="Shootgame_array" />
             </actions>
+        </event-block>
+        <event-block sid="594513074406560">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="531328063610359" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">txt_Normal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="910316230560814" type="System">
+                    <param id="0" name="Layout">shoot game</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="105018472147444">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="160317126223998" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="862572994129180" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="113431285976239">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="723830184017300" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">txt_fast</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="952380803435354" type="System">
+                    <param id="0" name="Layout">shoot game fast</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="609105535182090">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="677215912878728" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="386142736437974" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

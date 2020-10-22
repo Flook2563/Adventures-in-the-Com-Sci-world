@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Type the Alphabet - slow</name>
-    <sid>192035060998026</sid>
+    <sid>777210275064053</sid>
     <event-sheet>Type the Alphabet - slow</event-sheet>
     <size>
         <width>1708</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="bg" sid="225487326624031">
+        <layer name="bg" sid="538397121962899">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bg_typethealpha" uid="208">
+                <instance type="bg_typethealpha" uid="895">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -52,7 +52,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="main" sid="911790413383708">
+        <layer name="main" sid="581691177156511">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -68,7 +68,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="btn_txt" uid="209">
+                <instance type="btn_txt" uid="896">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -90,7 +90,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_txt_txt" uid="210">
+                <instance type="btn_txt_txt" uid="897">
                     <properties>
                         <text>Type the Alphabet</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -120,7 +120,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="top" sid="659550642310373">
+        <layer name="top" sid="598502116119251">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -136,7 +136,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="btn_mode_normal" uid="285">
+                <instance type="btn_mode_normal2" uid="899">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -146,8 +146,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>746</x>
-                        <y>62</y>
+                        <x>766</x>
+                        <y>77</y>
                         <z>0</z>
                         <width>150</width>
                         <height>30</height>
@@ -158,29 +158,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="owl" uid="211">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>768.692016602</x>
-                        <y>393.691986084</y>
-                        <z>0</z>
-                        <width>160</width>
-                        <height>160</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="box_ans1" uid="212">
+                <instance type="box_ans1" uid="900">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -202,7 +180,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="box_ans2" uid="213">
+                <instance type="box_ans2" uid="901">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -224,7 +202,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="box_ans3" uid="214">
+                <instance type="box_ans3" uid="902">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -246,7 +224,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="box_ans4" uid="215">
+                <instance type="box_ans4" uid="903">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -268,7 +246,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="box_ans5" uid="216">
+                <instance type="box_ans5" uid="904">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -290,7 +268,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="217">
+                <instance type="anwer_txt" uid="905">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -312,7 +290,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="218">
+                <instance type="anwer_txt" uid="906">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -334,7 +312,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="219">
+                <instance type="anwer_txt" uid="907">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -356,7 +334,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="220">
+                <instance type="anwer_txt" uid="908">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -378,7 +356,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="221">
+                <instance type="anwer_txt" uid="909">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -400,7 +378,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="222">
+                <instance type="anwer_txt" uid="910">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -422,7 +400,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="223">
+                <instance type="anwer_txt" uid="911">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -444,7 +422,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="224">
+                <instance type="anwer_txt" uid="912">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -466,7 +444,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="225">
+                <instance type="anwer_txt" uid="913">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -488,7 +466,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="226">
+                <instance type="anwer_txt" uid="914">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -510,7 +488,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="227">
+                <instance type="anwer_txt" uid="915">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -532,7 +510,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="228">
+                <instance type="anwer_txt" uid="916">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -554,7 +532,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="229">
+                <instance type="anwer_txt" uid="917">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -576,7 +554,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="230">
+                <instance type="anwer_txt" uid="918">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -598,7 +576,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="231">
+                <instance type="anwer_txt" uid="919">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -620,7 +598,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="232">
+                <instance type="anwer_txt" uid="920">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -642,7 +620,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="233">
+                <instance type="anwer_txt" uid="921">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -664,7 +642,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="234">
+                <instance type="anwer_txt" uid="922">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -686,7 +664,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="235">
+                <instance type="anwer_txt" uid="923">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -708,7 +686,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="236">
+                <instance type="anwer_txt" uid="924">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -730,7 +708,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="237">
+                <instance type="anwer_txt" uid="925">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -752,7 +730,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="238">
+                <instance type="anwer_txt" uid="926">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -774,7 +752,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="239">
+                <instance type="anwer_txt" uid="927">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -796,7 +774,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="240">
+                <instance type="anwer_txt" uid="928">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -818,7 +796,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="241">
+                <instance type="anwer_txt" uid="929">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -840,7 +818,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="anwer_txt" uid="242">
+                <instance type="anwer_txt" uid="930">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -862,7 +840,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="243">
+                <instance type="txt_a_z" uid="931">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -884,7 +862,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="244">
+                <instance type="txt_a_z" uid="932">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -906,7 +884,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="245">
+                <instance type="txt_a_z" uid="933">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -928,7 +906,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="246">
+                <instance type="txt_a_z" uid="934">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -950,7 +928,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="247">
+                <instance type="txt_a_z" uid="935">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -972,7 +950,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="248">
+                <instance type="txt_a_z" uid="936">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -994,7 +972,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="249">
+                <instance type="txt_a_z" uid="937">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1016,7 +994,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="250">
+                <instance type="txt_a_z" uid="938">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1038,7 +1016,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="251">
+                <instance type="txt_a_z" uid="939">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1060,7 +1038,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="252">
+                <instance type="txt_a_z" uid="940">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1082,7 +1060,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="253">
+                <instance type="txt_a_z" uid="941">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1104,7 +1082,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="254">
+                <instance type="txt_a_z" uid="942">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1126,7 +1104,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="255">
+                <instance type="txt_a_z" uid="943">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1148,7 +1126,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="256">
+                <instance type="txt_a_z" uid="944">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1170,7 +1148,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="257">
+                <instance type="txt_a_z" uid="945">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1192,7 +1170,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="258">
+                <instance type="txt_a_z" uid="946">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1214,7 +1192,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="259">
+                <instance type="txt_a_z" uid="947">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1236,7 +1214,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="260">
+                <instance type="txt_a_z" uid="948">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1258,7 +1236,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="261">
+                <instance type="txt_a_z" uid="949">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1280,7 +1258,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="262">
+                <instance type="txt_a_z" uid="950">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1302,7 +1280,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="263">
+                <instance type="txt_a_z" uid="951">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1324,7 +1302,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="264">
+                <instance type="txt_a_z" uid="952">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1346,7 +1324,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="265">
+                <instance type="txt_a_z" uid="953">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1368,7 +1346,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="266">
+                <instance type="txt_a_z" uid="954">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1390,7 +1368,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="267">
+                <instance type="txt_a_z" uid="955">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1412,7 +1390,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_a_z" uid="268">
+                <instance type="txt_a_z" uid="956">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1434,7 +1412,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Spriteclose" uid="269">
+                <instance type="Spriteclose" uid="957">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1445,7 +1423,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>427</x>
-                        <y>196</y>
+                        <y>195</y>
                         <z>0</z>
                         <width>433</width>
                         <height>82</height>
@@ -1456,7 +1434,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="key" uid="270">
+                <instance type="key" uid="958">
                     <properties>
                         <text>Press Key &quot;Enter&quot; to Start.</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1483,9 +1461,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Mode" uid="271">
+                <instance type="Mode" uid="959">
                     <properties>
-                        <text>Mode : Normal</text>
+                        <text>Mode : Slow</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Britannic Bold,-29,400,0</font>
                         <color>255,0,0</color>
@@ -1510,7 +1488,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_ans1" uid="272">
+                <instance type="txt_ans1" uid="960">
                     <properties>
                         <text> </text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1537,34 +1515,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txt_normal" uid="274">
-                    <properties>
-                        <text>Normal</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>710</x>
-                        <y>63</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txt_fast" uid="275">
+                <instance type="txt_fast" uid="962">
                     <properties>
                         <text>Fast</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1579,8 +1530,84 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>784</x>
-                        <y>63</y>
+                        <x>804</x>
+                        <y>79</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="btn_mode_normal" uid="898">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>692</x>
+                        <y>77</y>
+                        <z>0</z>
+                        <width>150</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txt_Normal" uid="961">
+                    <properties>
+                        <text>Normal</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>730</x>
+                        <y>78</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txt_slow" uid="964">
+                    <properties>
+                        <text>Slow</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>651</x>
+                        <y>78</y>
                         <z>0</z>
                         <width>64</width>
                         <height>30</height>
@@ -1594,7 +1621,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="popup" sid="562201808441287">
+        <layer name="popup" sid="904980371784160">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1610,7 +1637,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="black" uid="276">
+                <instance type="black" uid="965">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1632,7 +1659,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_menu_re" uid="277">
+                <instance type="btn_menu_re" uid="966">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1654,7 +1681,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_menu_home" uid="278">
+                <instance type="btn_menu_home" uid="967">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1676,7 +1703,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TiledBackground" uid="279">
+                <instance type="TiledBackground" uid="968">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1720,7 +1747,7 @@
                         <opacity>0.01</opacity>
                     </world>
                 </instance>
-                <instance type="btn_menu" uid="280">
+                <instance type="btn_menu" uid="969">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1769,7 +1796,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_nofi" uid="281">
+                <instance type="btn_nofi" uid="970">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1791,7 +1818,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_nofig" uid="282">
+                <instance type="btn_nofig" uid="971">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1840,7 +1867,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_menu_close" uid="283">
+                <instance type="btn_menu_close" uid="972">
                     <properties>
                         <text>X</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1867,7 +1894,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_nofi_close" uid="284">
+                <instance type="btn_nofi_close" uid="973">
                     <properties>
                         <text>X</text>
                         <initial-visibility>Visible</initial-visibility>

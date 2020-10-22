@@ -542,7 +542,7 @@
                             <param id="0" name="Text">score_shoot&amp;&quot; คะแนน&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="871126312557910" type="txt_3">
-                            <param id="0" name="Text">score_type&amp;&quot; วินาที&quot;</param>
+                            <param id="0" name="Text">score_type&amp;&quot; คะแนน&quot;</param>
                         </action>
                         <action id="5" name="Set frame" sid="836980728423619" type="status_re">
                             <param id="0" name="Frame number">frame_adx</param>

@@ -54,6 +54,10 @@
                     <param id="0" name="Variable">time2</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="714556423800843" type="System">
+                    <param id="0" name="Variable">time3</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-9" name="Set value" sid="347405977471936" type="System">
                     <param id="0" name="Variable">time_check</param>
                     <param id="1" name="Value">0</param>
@@ -3014,12 +3018,12 @@
                 <condition id="6" name="On object clicked" sid="767486627711939" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">txt_normal</param>
+                    <param id="2" name="Object clicked">txt_Normal</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="323871479409033" type="System">
-                    <param id="0" name="Layout">Type the Alphabet - slow</param>
+                    <param id="0" name="Layout">Type the Alphabet - nor</param>
                 </action>
             </actions>
             <sub-events>
@@ -3058,6 +3062,35 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Play" sid="701257149908476" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="398000983959306">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="243525295756071" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">txt_slow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="288548566166719" type="System">
+                    <param id="0" name="Layout">Type the Alphabet - slow</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="289443954309341">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="996115210928386" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="856844043136105" type="Audio">
                             <param id="0" name="Audio file">menu_click</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-10</param>

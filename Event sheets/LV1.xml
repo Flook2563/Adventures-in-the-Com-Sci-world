@@ -27,6 +27,9 @@
                     <param id="0" name="Text">player.select</param>
                 </action>
                 <action id="62" name="Go online" sid="240920390978553" type="Firebase" />
+                <action id="0" name="Set text" sid="621417449780440" type="check_ans">
+                    <param id="0" name="Text">&quot;Score : &quot;&amp;score</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="604106139817386" title="PlayerMovement">

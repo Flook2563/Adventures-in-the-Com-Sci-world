@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>shoot game fast</name>
+    <events>
+        <variable constant="0" name="varScore2" sid="486798115834623" static="0" type="number">0</variable>
+        <variable constant="0" name="varLevel2" sid="568750974663587" static="0" type="number">1</variable>
+        <event-block sid="607800159549866">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="323249284524157" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="670029538929061" type="System">
+                    <param id="0" name="Variable">varScore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="777889858223583" type="spritefont" />
+                <action id="11" name="Load" sid="228597796621761" type="ArrayLetters">
+                    <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[26,1,1],&quot;&quot;data&quot;&quot;:[[[&quot;&quot;A&quot;&quot;]],[[&quot;&quot;B&quot;&quot;]],[[&quot;&quot;C&quot;&quot;]],[[&quot;&quot;D&quot;&quot;]],[[&quot;&quot;E&quot;&quot;]],[[&quot;&quot;F&quot;&quot;]],[[&quot;&quot;G&quot;&quot;]],[[&quot;&quot;H&quot;&quot;]],[[&quot;&quot;I&quot;&quot;]],[[&quot;&quot;J&quot;&quot;]],[[&quot;&quot;K&quot;&quot;]],[[&quot;&quot;L&quot;&quot;]],[[&quot;&quot;M&quot;&quot;]],[[&quot;&quot;N&quot;&quot;]],[[&quot;&quot;O&quot;&quot;]],[[&quot;&quot;P&quot;&quot;]],[[&quot;&quot;Q&quot;&quot;]],[[&quot;&quot;R&quot;&quot;]],[[&quot;&quot;S&quot;&quot;]],[[&quot;&quot;T&quot;&quot;]],[[&quot;&quot;U&quot;&quot;]],[[&quot;&quot;V&quot;&quot;]],[[&quot;&quot;W&quot;&quot;]],[[&quot;&quot;X&quot;&quot;]],[[&quot;&quot;Y&quot;&quot;]],[[&quot;&quot;Z&quot;&quot;]]]}&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="328459752218438" type="txtWord">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="532819419090570">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="655485979546559" type="System">
+                            <param id="0" name="Variable">varLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="947337928609514" type="ArrayWords">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[30,1,1],&quot;&quot;data&quot;&quot;:[[[&quot;&quot;HTML&quot;&quot;]],[[&quot;&quot;Type&quot;&quot;]],[[&quot;&quot;Error&quot;&quot;]],[[&quot;&quot;Login&quot;&quot;]],[[&quot;&quot;click&quot;&quot;]],[[&quot;&quot;print&quot;&quot;]],[[&quot;&quot;python&quot;&quot;]],[[&quot;&quot;Modem&quot;&quot;]],[[&quot;&quot;HDMI&quot;&quot;]],[[&quot;&quot;button&quot;&quot;]],[[&quot;&quot;JAVA&quot;&quot;]],[[&quot;&quot;Hello&quot;&quot;]],[[&quot;&quot;Access&quot;&quot;]],[[&quot;&quot;Upload&quot;&quot;]],[[&quot;&quot;start&quot;&quot;]],[[&quot;&quot;scroll&quot;&quot;]],[[&quot;&quot;search&quot;&quot;]],[[&quot;&quot;Laptop&quot;&quot;]],[[&quot;&quot;Note&quot;&quot;]],[[&quot;&quot;Coding&quot;&quot;]],[[&quot;&quot;MySQL&quot;&quot;]],[[&quot;&quot;Email&quot;&quot;]],[[&quot;&quot;prize&quot;&quot;]],[[&quot;&quot;Trash&quot;&quot;]],[[&quot;&quot;Input&quot;&quot;]],[[&quot;&quot;Outpu&quot;&quot;]],[[&quot;&quot;Online&quot;&quot;]],[[&quot;&quot;User&quot;&quot;]],[[&quot;&quot;Bug&quot;&quot;]],[[&quot;&quot;Mouse&quot;&quot;]]]}&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="579098952601259">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="704072946695790" type="System">
+                            <param id="0" name="Variable">varLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="297923520977881" type="ArrayWords">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[30,1,1],&quot;&quot;data&quot;&quot;:[[[&quot;&quot;jukebox&quot;&quot;]],[[&quot;&quot;puzzles&quot;&quot;]],[[&quot;&quot;kickbox&quot;&quot;]],[[&quot;&quot;zigzags&quot;&quot;]],[[&quot;&quot;squeeze&quot;&quot;]],[[&quot;&quot;junkmen&quot;&quot;]],[[&quot;&quot;quicken&quot;&quot;]],[[&quot;&quot;quicker&quot;&quot;]],[[&quot;&quot;complex&quot;&quot;]],[[&quot;&quot;jackals&quot;&quot;]],[[&quot;&quot;jouking&quot;&quot;]],[[&quot;&quot;waxwork&quot;&quot;]],[[&quot;&quot;showbiz&quot;&quot;]],[[&quot;&quot;subject&quot;&quot;]],[[&quot;&quot;picquet&quot;&quot;]],[[&quot;&quot;qualify&quot;&quot;]],[[&quot;&quot;mahjong&quot;&quot;]],[[&quot;&quot;juryman&quot;&quot;]],[[&quot;&quot;cerveza&quot;&quot;]],[[&quot;&quot;bazooka&quot;&quot;]],[[&quot;&quot;jackass&quot;&quot;]],[[&quot;&quot;pajamas&quot;&quot;]],[[&quot;&quot;feezing&quot;&quot;]],[[&quot;&quot;zooming&quot;&quot;]],[[&quot;&quot;zippier&quot;&quot;]],[[&quot;&quot;cashbox&quot;&quot;]],[[&quot;&quot;jewelry&quot;&quot;]],[[&quot;&quot;foxfish&quot;&quot;]],[[&quot;&quot;azimuth&quot;&quot;]],[[&quot;&quot;vizards&quot;&quot;]]]}&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771976918899003">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="319364252606784" type="sprite_font">
+                            <param id="0" name="Text">&quot;READY&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="626350919393781" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="801704726652425" type="Function">
+                            <param id="0" name="Name">&quot;set&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <variable constant="0" name="varRND2" sid="415532697025666" static="0" type="number">0</variable>
+        <variable constant="0" name="varLen2" sid="319047119813214" static="0" type="number">0</variable>
+        <event-block sid="950195034133603">
+            <conditions>
+                <condition id="0" name="On function" sid="186565918119645" type="Function">
+                    <param id="0" name="Name">&quot;set&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="598298150430885" type="System">
+                    <param id="0" name="Variable">varRND</param>
+                    <param id="1" name="Value">int(random(ArrayWords.Width))</param>
+                </action>
+                <action id="0" name="Set text" sid="786708905864154" type="txtWord">
+                    <param id="0" name="Text">ArrayWords.At(varRND)</param>
+                </action>
+                <action id="-9" name="Set value" sid="629194289218706" type="System">
+                    <param id="0" name="Variable">varLen</param>
+                    <param id="1" name="Value">len(txtWord.Text)</param>
+                </action>
+                <action id="0" name="Set text" sid="249918647427071" type="sprite_font">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="749519946827204" type="System">
+                    <param id="0" name="Seconds">1.0/2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="798153714143157" type="sprite_font">
+                    <param id="0" name="Instance variable">over</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="166980735571756" type="Audio">
+                    <param id="0" name="Audio file">Now</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">sound</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="311124560688382" type="Text">
+                    <param id="0" name="Text">&quot;Score &quot;&amp;varScore</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="991701282255934">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="727208132152930" type="System">
+                            <param id="0" name="Count">varLen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="449943023856497" type="System">
+                            <param id="0" name="Object to create">spritefont</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">320+loopindex*40</param>
+                            <param id="3" name="Y">50</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="938403735952233" type="spritefont">
+                            <param id="0" name="Frame number">ArrayLetters.IndexOf(uppercase(mid(txtWord.Text,loopindex,1)))</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="289048372066576" type="spritefont">
+                            <param id="0" name="Speed">120</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="245261440066041" type="spritefont">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="471331542130059">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="974793369037358" type="spritefont">
+                    <param id="0" name="Object">bgwall2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="461765486188774" type="spritefont" />
+                <action id="0" name="Play" sid="833367969318038" type="Audio">
+                    <param id="0" name="Audio file">click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">sound</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="489146656748785">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="763966524212132" type="Keyboard" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="641489456318536" type="sprite_font">
+                    <param id="0" name="Instance variable">over</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="736524176499358" type="Keyboard">
+                    <param id="0" name="Key">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Append text" sid="198078156316314" type="sprite_font">
+                    <param id="0" name="Text">uppercase(Keyboard.StringFromKeyCode(Keyboard.LastKeyCode))</param>
+                </action>
+                <action id="0" name="Play" sid="743133820740086" type="Audio">
+                    <param id="0" name="Audio file">blub1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">sound</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="338289077492151">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="683041058997822" type="Keyboard">
+                    <param id="0" name="Key">8</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="862877190516176" type="sprite_font">
+                    <param id="0" name="Instance variable">over</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="305872613487926" type="sprite_font">
+                    <param id="0" name="Text">left(sprite_font.Text,len(sprite_font.Text)-1)</param>
+                </action>
+                <action id="0" name="Play" sid="487226282315646" type="Audio">
+                    <param id="0" name="Audio file">sfx1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">sound</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="914852104505176">
+            <conditions>
+                <condition id="0" name="Compare text" sid="546593077668580" type="sprite_font">
+                    <param id="0" name="Text to compare">txtWord.Text</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+                <condition id="0" inverted="1" name="Compare text" sid="791894298360496" type="txtWord">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="430716513250402" type="sprite_font">
+                    <param id="0" name="Instance variable">over</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="667747585020735" type="spritefont" />
+            </actions>
+            <sub-events>
+                <event-block sid="986628049365589">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="154722133710131" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="315416957186923" type="Audio">
+                            <param id="0" name="Audio file">Applause</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;over&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="131959404832190" type="System">
+                            <param id="0" name="Variable">varScore</param>
+                            <param id="1" name="Value">spritefont.Count*0.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="133557445700344" type="Text">
+                            <param id="0" name="Text">&quot;Score &quot;&amp;varScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="146304318817017">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="120996423538007" type="System">
+                    <param id="0" name="First value">spritefont.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="231385400835135" type="System" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="124153429921491" type="sprite_font">
+                    <param id="0" name="Instance variable">over</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="259528072133099" type="sprite_font">
+                    <param id="0" name="Instance variable">over</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="725590595999959" type="Audio">
+                    <param id="0" name="Audio file">Boo</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">sound</param>
+                    <param id="1" name="Tag (optional)">&quot;over&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="920700462036235" type="Function">
+                    <param id="0" name="Name">&quot;shootgame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="205585998534078" type="Function">
+                    <param id="0" name="Name">&quot;shootgame_post&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="807742647065412" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="732122747383463">
+            <conditions>
+                <condition id="0" name="On ended" sid="886536942744141" type="Audio">
+                    <param id="0" name="Tag">&quot;over&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="338715826538723" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="9" name="Delete" sid="448395040756903" type="ArrayWords">
+                    <param id="0" name="Index">varRND</param>
+                    <param id="1" name="Axis">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="392092116806874">
+                    <conditions>
+                        <condition id="6" inverted="1" name="Is empty" sid="401024274676676" type="ArrayWords" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="159386252307627" type="Function">
+                            <param id="0" name="Name">&quot;set&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="256260655508906">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="695484789161321" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="860483521467602" type="System">
+                            <param id="0" name="Variable">varLevel</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="716426008230732" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="933320294640559" title="popup-shootgame2">
+            <sub-events>
+                <event-block sid="833997012755020">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="673379943154354" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">black</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="113166006084512" type="btn_menu">
+                            <param id="0" name="Instance variable">show</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="978183639858920" type="btn_menu">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="707860694896673" type="btn_menu">
+                            <param id="0" name="Instance variable">show</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="857564571214763" type="TiledBackground">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="652903734197124" type="TiledBackground">
+                            <param id="0" name="Width">LayoutWidth</param>
+                            <param id="1" name="Height">LayoutHeight</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="719521970200422">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="315436343215069" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="186901071392072" type="Audio">
+                                    <param id="0" name="Audio file">menu_click</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="921028600080590">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="911541911263024" type="btn_menu">
+                            <param id="0" name="Instance variable">show</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="246786262046661" type="btn_menu_close">
+                            <param id="0" name="Object">btn_menu</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="438874922530093" type="btn_menu_home">
+                            <param id="0" name="Object">btn_menu</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="476436189814200" type="btn_menu_re">
+                            <param id="0" name="Object">btn_menu</param>
+                            <param id="1" name="Image point (optional)">3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="739993955067200">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="925509470783192" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">btn_menu_close</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween2" id="10" name="Start" sid="106943878033814" type="btn_menu">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">1</param>
+                                </action>
+                                <action behavior="LiteTween2" id="10" name="Start" sid="556629336559127" type="TiledBackground">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="124515590636842">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="669501427784248" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">btn_menu_home</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="217048503673750" type="System">
+                                    <param id="0" name="Layout">Home</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="205340575270863">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="331692738372407" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="493601817098562" type="Audio">
+                                            <param id="0" name="Audio file">menu_click</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="851614835030591">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="498574803288972" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">btn_menu_re</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="590357940029969" type="System">
+                                    <param id="0" name="Layout">shoot game</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="264079881064900">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="406574715855741" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="669259802097259" type="Audio">
+                                            <param id="0" name="Audio file">menu_click</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="960697054232614">
+                    <conditions>
+                        <condition behavior="LiteTween2" id="4" name="On tween end" sid="219648120108841" type="btn_menu" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="932406720206976" type="btn_menu">
+                            <param id="0" name="Instance variable">show</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="258300053516603" title="Function-shootgame2">
+            <sub-events>
+                <event-block sid="764938885884414">
+                    <conditions>
+                        <condition id="0" name="On function" sid="180898864647460" type="Function">
+                            <param id="0" name="Name">&quot;shootgame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="279044200146229" type="Shootgame_array">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">display_name</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="703283145506223" type="Shootgame_array">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">varScore</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="940995737971970" type="Shootgame_array">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">email</param>
+                        </action>
+                        <action id="1" name="Set value" sid="609744457140123" type="shootgame_data">
+                            <param id="0" name="Key">&quot;Email&quot;</param>
+                            <param id="1" name="Value">Shootgame_array.At(2)</param>
+                        </action>
+                        <action id="1" name="Set value" sid="906410724180965" type="shootgame_data">
+                            <param id="0" name="Key">&quot;Name&quot;</param>
+                            <param id="1" name="Value">Shootgame_array.At(0)</param>
+                        </action>
+                        <action id="4" name="Save" sid="708114702786260" type="shootgame_data">
+                            <param id="0" name="ID">&quot;ShootGame&quot;&amp;&quot;/&quot;&amp;display_name</param>
+                            <param id="1" name="Set mode">0</param>
+                            <param id="2" name="Tag">&quot;_&quot;</param>
+                        </action>
+                        <action id="1" name="Set value" sid="631439702131235" type="shootgame_table">
+                            <param id="0" name="Key">&quot;score&quot;</param>
+                            <param id="1" name="Value">varScore</param>
+                        </action>
+                        <action id="4" name="Save" sid="275973476507298" type="shootgame_table">
+                            <param id="0" name="ID">&quot;ShootGame&quot;&amp;&quot;/&quot;&amp;display_name&amp;&quot;/&quot;&amp;&quot;score&quot;&amp;&quot;/&quot;&amp;Date.Year &amp; &quot; &quot; &amp; Date.Month &amp; &quot; &quot; &amp; Date.Date&amp; &quot; &quot; &amp;Date.Hours &amp; &quot; : &quot; &amp; Date.Minutes &amp; &quot; : &quot; &amp; Date.Seconds</param>
+                            <param id="1" name="Set mode">0</param>
+                            <param id="2" name="Tag">&quot;shoot&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="962071345897601">
+                    <conditions>
+                        <condition id="0" name="On function" sid="815215725951177" type="Function">
+                            <param id="0" name="Name">&quot;shootgame_post&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Post score" sid="337101300936633" type="shootgame">
+                            <param id="0" name="UserID">display_name</param>
+                            <param id="1" name="Name">display_name</param>
+                            <param id="2" name="Score">varScore</param>
+                            <param id="3" name="Extra">&quot;&quot;</param>
+                            <param id="4" name="Post condition">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="511034077310225" type="System">
+                            <param id="0" name="Variable">varScore</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="731951304119632">
+            <conditions>
+                <condition id="1" name="On save complete" sid="831099114989557" type="shootgame_table">
+                    <param id="0" name="Tag">&quot;shoot&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Clear" sid="230581603670458" type="Shootgame_array" />
+            </actions>
+        </event-block>
+        <event-block sid="485514906258047">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="645652794183932" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">txt_Normal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="902967939706130" type="System">
+                    <param id="0" name="Layout">shoot game</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="605549804741089">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="127060409298702" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="480549162995077" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="125826274625851">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="455842786880640" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">txt_fast</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="491376556106050" type="System">
+                    <param id="0" name="Layout">shoot game fast</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="364153493453146">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="895015352973303" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="861933207274635" type="Audio">
+                            <param id="0" name="Audio file">menu_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
