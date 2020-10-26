@@ -2592,6 +2592,20 @@
         <object-type name="check_ans" sid="956590316915115">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Shoot_HP" sid="688470958736023">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="104954078703742" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Shoot_HP1" sid="566359969605877">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Count_timezoom" sid="683653063237126">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="box_ans" plugin-id="Sprite" sid="631846431795349">

@@ -14,6 +14,10 @@
                     <param id="0" name="Variable">varScore</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="956107723935248" type="System">
+                    <param id="0" name="Variable">Shoot_counthp</param>
+                    <param id="1" name="Value">2</param>
+                </action>
                 <action id="-9" name="Destroy" sid="777889858223583" type="spritefont" />
                 <action id="11" name="Load" sid="228597796621761" type="ArrayLetters">
                     <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[26,1,1],&quot;&quot;data&quot;&quot;:[[[&quot;&quot;A&quot;&quot;]],[[&quot;&quot;B&quot;&quot;]],[[&quot;&quot;C&quot;&quot;]],[[&quot;&quot;D&quot;&quot;]],[[&quot;&quot;E&quot;&quot;]],[[&quot;&quot;F&quot;&quot;]],[[&quot;&quot;G&quot;&quot;]],[[&quot;&quot;H&quot;&quot;]],[[&quot;&quot;I&quot;&quot;]],[[&quot;&quot;J&quot;&quot;]],[[&quot;&quot;K&quot;&quot;]],[[&quot;&quot;L&quot;&quot;]],[[&quot;&quot;M&quot;&quot;]],[[&quot;&quot;N&quot;&quot;]],[[&quot;&quot;O&quot;&quot;]],[[&quot;&quot;P&quot;&quot;]],[[&quot;&quot;Q&quot;&quot;]],[[&quot;&quot;R&quot;&quot;]],[[&quot;&quot;S&quot;&quot;]],[[&quot;&quot;T&quot;&quot;]],[[&quot;&quot;U&quot;&quot;]],[[&quot;&quot;V&quot;&quot;]],[[&quot;&quot;W&quot;&quot;]],[[&quot;&quot;X&quot;&quot;]],[[&quot;&quot;Y&quot;&quot;]],[[&quot;&quot;Z&quot;&quot;]]]}&quot;</param>
@@ -258,6 +262,24 @@
                     <param id="3" name="Volume">sound</param>
                     <param id="1" name="Tag (optional)">&quot;over&quot;</param>
                 </action>
+                <action id="-11" name="Subtract from" sid="759551086431670" type="System">
+                    <param id="0" name="Variable">Shoot_counthp</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="228314554406632" type="Shoot_HP1">
+                    <param id="0" name="Text">Shoot_counthp</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="325941659937087">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="201220903905358" type="System">
+                    <param id="0" name="Variable">Shoot_counthp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="0" name="Call function" sid="920700462036235" type="Function">
                     <param id="0" name="Name">&quot;shootgame&quot;</param>
                     <param id="1" name="Parameter {n}"></param>

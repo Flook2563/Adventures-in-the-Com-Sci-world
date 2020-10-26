@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="varScore" sid="960855200920849" static="0" type="number">0</variable>
         <variable constant="0" name="varLevel" sid="357580953605823" static="0" type="number">1</variable>
+        <variable constant="0" name="Shoot_counthp" sid="197939714049922" static="0" type="number">2</variable>
         <event-block sid="606409149314993">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="666421405886427" type="System" />
@@ -13,6 +14,10 @@
                 <action id="-9" name="Set value" sid="263156269053305" type="System">
                     <param id="0" name="Variable">varScore</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="646358344275889" type="System">
+                    <param id="0" name="Variable">Shoot_counthp</param>
+                    <param id="1" name="Value">2</param>
                 </action>
                 <action id="-9" name="Destroy" sid="433872561437534" type="spritefont" />
                 <action id="11" name="Load" sid="450979332048089" type="ArrayLetters">
@@ -258,6 +263,24 @@
                     <param id="3" name="Volume">sound</param>
                     <param id="1" name="Tag (optional)">&quot;over&quot;</param>
                 </action>
+                <action id="-11" name="Subtract from" sid="666782707696746" type="System">
+                    <param id="0" name="Variable">Shoot_counthp</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="645569780873101" type="Shoot_HP1">
+                    <param id="0" name="Text">Shoot_counthp</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="716133095131119">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="963061902384894" type="System">
+                    <param id="0" name="Variable">Shoot_counthp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="0" name="Call function" sid="193074419139847" type="Function">
                     <param id="0" name="Name">&quot;shootgame&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
