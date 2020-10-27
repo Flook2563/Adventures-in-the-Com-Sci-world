@@ -2606,6 +2606,9 @@
         <object-type name="Count_timezoom" sid="683653063237126">
             <plugin id="Text" />
         </object-type>
+        <object-type global="1" name="pop_subject" sid="124146737273235">
+            <plugin id="JSON_plus_plus" />
+        </object-type>
     </object-folder>
     <families>
         <family name="box_ans" plugin-id="Sprite" sid="631846431795349">

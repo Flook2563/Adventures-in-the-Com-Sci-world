@@ -418,7 +418,7 @@
                 <instance type="Count_timezoom" uid="1003">
                     <properties>
                         <text>Time : 0</text>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-21,700,0</font>
                         <color>255,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>

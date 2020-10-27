@@ -18,6 +18,7 @@
         <variable constant="0" name="Time_Load" sid="385139246784749" static="0" type="text"></variable>
         <variable constant="0" name="ans_Load" sid="638348934364176" static="0" type="text"></variable>
         <variable constant="0" name="Subject_Load" sid="622043067751119" static="0" type="text"></variable>
+        <variable constant="0" name="pop_subject" sid="704672876529601" static="0" type="text"></variable>
         <event-block sid="880565324126641">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="100097211371086" type="System" />
@@ -208,6 +209,10 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="215877287456911">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

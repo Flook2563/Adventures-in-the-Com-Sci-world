@@ -549,6 +549,7 @@
         <instance type="1time" uid="886" />
         <instance type="1subject" uid="888" />
         <instance type="1count" uid="889" />
+        <instance type="pop_subject" uid="1004" />
     </nonworld-instances>
     <effects />
 </c2layout>
