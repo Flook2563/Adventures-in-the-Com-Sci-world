@@ -550,6 +550,14 @@
         <instance type="1subject" uid="888" />
         <instance type="1count" uid="889" />
         <instance type="pop_subject" uid="1004" />
+        <instance type="Load_Qu_lock" uid="891" />
+        <instance type="1Qu_lock" uid="1009">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

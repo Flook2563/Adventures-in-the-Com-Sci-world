@@ -4,11 +4,13 @@
     <name>Setting</name>
     <events>
         <variable constant="0" name="Size_Subject" sid="836113665948984" static="0" type="number">0</variable>
+        <variable constant="0" name="Size_lock" sid="998041775715455" static="0" type="number">0</variable>
         <variable constant="0" name="Select_s" sid="517508309284988" static="0" type="text">Network</variable>
         <variable constant="0" name="sound" sid="545203470450424" static="0" type="number">-10</variable>
         <variable constant="0" name="sound_count" sid="176722220001333" static="0" type="number">5</variable>
         <variable constant="0" name="Load_Qu" sid="234546722415607" static="0" type="text"></variable>
         <variable constant="0" name="count_Qu" sid="326727838417064" static="0" type="number">0</variable>
+        <variable constant="0" name="count_lock" sid="965764442717038" static="0" type="number">0</variable>
         <variable constant="0" name="Count_Load" sid="829620666266528" static="0" type="text"></variable>
         <variable constant="0" name="Qu_Load" sid="895058322978997" static="0" type="text"></variable>
         <variable constant="0" name="C1_Load" sid="404388896774018" static="0" type="text"></variable>
@@ -19,6 +21,9 @@
         <variable constant="0" name="ans_Load" sid="638348934364176" static="0" type="text"></variable>
         <variable constant="0" name="Subject_Load" sid="622043067751119" static="0" type="text"></variable>
         <variable constant="0" name="pop_subject" sid="704672876529601" static="0" type="text"></variable>
+        <variable constant="0" name="Load_Qu_lock" sid="364743180291001" static="0" type="text"></variable>
+        <variable constant="0" name="Load_Qu_text" sid="327720482186645" static="0" type="text"></variable>
+        <variable constant="0" name="Compare_Qu" sid="374390408103860" static="0" type="text"></variable>
         <event-block sid="880565324126641">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="100097211371086" type="System" />
@@ -32,6 +37,15 @@
                 <action id="0" name="Load JSON" sid="302118061908567" type="Load_Qu">
                     <param id="0" name="Tag">&quot;post&quot;</param>
                     <param id="1" name="URL">Load_Qu</param>
+                    <param id="2" name="POST">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="735777466856334" type="System">
+                    <param id="0" name="Variable">Load_Qu_lock</param>
+                    <param id="1" name="Value">&quot;https://quiz-game-37caa.firebaseio.com/Class_Subject.json&quot;</param>
+                </action>
+                <action id="0" name="Load JSON" sid="378524682111139" type="Load_Qu_lock">
+                    <param id="0" name="Tag">&quot;lock&quot;</param>
+                    <param id="1" name="URL">Load_Qu_lock</param>
                     <param id="2" name="POST">&quot;&quot;</param>
                 </action>
             </actions>
@@ -233,6 +247,51 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="733606871708545">
+            <conditions>
+                <condition id="0" name="On completed" sid="722424278469962" type="Load_Qu_lock">
+                    <param id="0" name="Tag">&quot;lock&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="435770821824915" type="System">
+                    <param id="0" name="Variable">Size_lock</param>
+                    <param id="1" name="Value">int(Load_Qu_lock.GetSize)</param>
+                </action>
+                <action id="-9" name="Set value" sid="116240033217846" type="System">
+                    <param id="0" name="Variable">count_lock</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="589767773779363">
+            <conditions>
+                <condition id="-23" name="While" sid="623600305083067" type="System" />
+                <condition id="-14" name="Compare variable" sid="338602960594852" type="System">
+                    <param id="0" name="Variable">count_lock</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">Size_lock</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="536508438325007" type="System">
+                    <param id="0" name="Variable">Load_Qu_text</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="588160825380498" type="System">
+                    <param id="0" name="Variable">Load_Qu_text</param>
+                    <param id="1" name="Value">Load_Qu_lock.GetKeyName(count_lock)</param>
+                </action>
+                <action id="2" name="Set at X" sid="281306221537083" type="1Qu_lock">
+                    <param id="0" name="X">count_lock</param>
+                    <param id="1" name="Value">Load_Qu_lock.GetValue(Load_Qu_text,&quot;Status&quot;)</param>
+                </action>
+                <action id="-10" name="Add to" sid="336099212110264" type="System">
+                    <param id="0" name="Variable">count_lock</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="528478330564384">
             <conditions>
                 <condition id="-23" name="While" sid="805409542244376" type="System" />
@@ -243,18 +302,54 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="387041576117516" type="System">
+                    <param id="0" name="Variable">Compare_Qu</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
                 <action id="2" name="Set at X" sid="444249812553547" type="Array_load">
                     <param id="0" name="X">count_Qu</param>
                     <param id="1" name="Value">Load_Qu.GetKeyName(count_Qu)</param>
                 </action>
-                <action id="7" name="Add item" sid="301704657777194" type="SelectSubject">
-                    <param id="0" name="Text">Array_load.At(count_Qu)</param>
-                </action>
-                <action id="-10" name="Add to" sid="934140430070286" type="System">
-                    <param id="0" name="Variable">count_Qu</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-9" name="Set value" sid="551417920036873" type="System">
+                    <param id="0" name="Variable">Compare_Qu</param>
+                    <param id="1" name="Value">1Qu_lock.At(count_Qu)</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="724417653323836">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="946824359302186" type="System">
+                            <param id="0" name="Variable">Compare_Qu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Unlock&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="301704657777194" type="SelectSubject">
+                            <param id="0" name="Text">Array_load.At(count_Qu)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="934140430070286" type="System">
+                            <param id="0" name="Variable">count_Qu</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="161169290478543">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="442974479847537" type="System">
+                            <param id="0" name="Variable">Compare_Qu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Lock&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="635645833630367" type="System">
+                            <param id="0" name="Variable">count_Qu</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="185829364665802">
             <conditions>
